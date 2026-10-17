@@ -118,3 +118,9 @@ def test_coach_files_and_session_flow():
     for s in [r"Documents\Learning", "plan.md", "log.md", "cards/", "woodpecker/",
               "Session-only", "Long-running", "deadline"]:
         assert s in text, s
+
+
+def test_woodpecker_rule_cycles_and_benchmark():
+    text = read("references/woodpecker.md")
+    for s in ["S12", "why", "halv", "set.md", "cycles.md", "Benchmark", "weekly", "worst day"]:
+        assert s in text, s
