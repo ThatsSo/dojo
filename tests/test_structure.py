@@ -76,3 +76,9 @@ def test_skill_links_every_reference():
     text = read("SKILL.md")
     for ref in REQUIRED_REFERENCES:
         assert f"references/{ref}" in text, ref
+
+
+def test_cards_md_documents_format():
+    text = read("references/cards.md")
+    for s in ["no header", "cards_csv.py", "csv_to_apkg.py"]:
+        assert s in text, s
