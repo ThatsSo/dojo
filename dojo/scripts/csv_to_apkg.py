@@ -55,11 +55,14 @@ def build_package(rows, deck_name: str, reverse: bool = False):
     )
     deck = genanki.Deck(stable_id(deck_name), deck_name)
     for front, back in rows:
-        deck.add_note(genanki.Note(model=model, fields=[card_html(front), card_html(back)]))
+        # GUID keyed on deck + front, so fixing a card's back updates it on re-import.
+        deck.add_note(genanki.Note(model=model, fields=[card_html(front), card_html(back)],
+                                   guid=genanki.guid_for(deck_name, front)))
     return genanki.Package(deck)
 
 
 def main(argv=None) -> int:
+    sys.stdout.reconfigure(errors="replace")
     p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument("csv")
     p.add_argument("deck_name")

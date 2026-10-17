@@ -36,29 +36,31 @@ Example:
 ## Workflow
 
 1. Write the cards as `(front, back)` pairs following the rules above.
-2. Write them with the helper, so quoting is always right:
+2. Save the pairs as a JSON file (`rows.json`, a list of `[front, back]` pairs, written with your file-writing tool), then convert it. The helper does the CSV quoting and validates in the same step:
 
    ```bash
-   python -c "import sys; sys.path.insert(0, r'<skill>/scripts'); from cards_csv import write_csv; write_csv([('front','back')], 'deck.csv')"
+   python "<skill>/scripts/cards_csv.py" --from-json rows.json deck.csv
    ```
 
-   Or write the file directly using the format above.
+   Or write the CSV directly using the format above and validate it (step 3).
 3. Validate until it prints `OK`:
 
    ```bash
-   python <skill>/scripts/cards_csv.py deck.csv
+   python "<skill>/scripts/cards_csv.py" deck.csv
    ```
 
-   It reports wrong column counts, empty fields, the header quirk, duplicates and empty decks, with row numbers.
+   It reports wrong column counts, empty fields, the header quirk, duplicates and empty decks. Row numbers count CSV records, so a quoted multi-line card counts as one row.
 4. Optional, for an Anki package:
 
    ```bash
-   python <skill>/scripts/csv_to_apkg.py deck.csv "Deck Name" [--reverse] [-o deck.apkg]
+   python "<skill>/scripts/csv_to_apkg.py" deck.csv "Deck Name" [--reverse] [-o deck.apkg]
    ```
 
-   This needs `pip install genanki`; the script prints that instruction if it's missing. IDs come from the deck name, so re-importing updates the deck instead of duplicating it.
+   This needs `pip install genanki`; the script prints that instruction if it's missing.
+   - **Re-importing:** deck IDs come from the deck name and note IDs from the deck name plus the card front. Re-importing an edited deck therefore updates cards whose *back* changed. A card whose *front* changed arrives as a new card; delete the old one in Anki.
+   - **Pick `--reverse` once per deck:** switching it later changes the note type.
 
-`<skill>` is this skill's folder (`~/.claude/skills/dojo`).
+`<skill>` is this skill's folder, as an absolute path. On James's machine that's `C:\Users\James\.claude\skills\dojo`; elsewhere, expand `~/.claude/skills/dojo`.
 
 ## Where decks go
 

@@ -54,7 +54,7 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 **Signals present:** Practice uses real material (real songs, real sentences, real positions). There's a path from drills to real performance, and some way to see whether gains carry over.
 **Signals absent:** Drills that never meet real use; trainer scores treated as the goal; abstract exercises with no bridge to the target.
 **Misapplications:** Rejecting all isolated drills as "indirect". Drills are fine when they serve a direct goal (see S3).
-**Evidence:** established
+**Evidence:** established (the transfer problem); practitioner (the 2× time-in-real-use ratio)
 
 ### S3. All-round practice plus bottleneck drills
 **What it says:** Every session covers all the categories at the learner's level. On top of that, short targeted add-ons drill the diagnosed weakest point (the rate-limiting step), then return it to whole practice. Face the uncomfortable weakness rather than avoiding it.
@@ -102,7 +102,7 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 **Signals present:** Difficulty adapts to performance. Manual difficulty controls exist. Content is levelled. There are tempo or timescale controls.
 **Signals absent:** One fixed difficulty. Jumps between levels that are too big. No way to slow down.
 **Misapplications:** Raising difficulty because the learner *can survive it* instead of because their technique holds.
-**Evidence:** established
+**Evidence:** established (the challenge–skill match); practitioner ("too hard teaches the wrong technique")
 
 ### S9. Accuracy first, then speed
 **What it says:** Slow down until accuracy is near-perfect. Raise speed only once accuracy holds, and drop back when it doesn't. Doing something slowly and correctly beats doing it fast with mistakes, because repeated errors become habits.
@@ -153,7 +153,7 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 **Signals present:** Strategy or theory content is separate from execution drills. Execution drills have high volume and fast feedback. New skills are introduced through analogies to known ones.
 **Signals absent:** Execution taught only through verbal rules. Learners told to think through every step at performance speed.
 **Misapplications:** Treating implicit learning as "no explanation ever". One well-chosen explicit cue can speed up perceptual learning dramatically (see `sources.md`).
-**Evidence:** established
+**Evidence:** established (choking under conscious monitoring; implicit robustness); practitioner/philosophy ("great players make bad coaches")
 
 ---
 

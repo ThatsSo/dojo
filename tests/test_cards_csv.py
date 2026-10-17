@@ -41,3 +41,16 @@ def test_validate_flags_problems():
     assert any("duplicate" in e for e in validate("a,b\na,b\n"))
     assert validate("\n\n") == ["no cards"]
     assert validate("a,b\n") == []
+
+
+def test_cli_from_json_writes_valid_csv(tmp_path):
+    import json
+    import subprocess
+    rows = tmp_path / "rows.json"
+    rows.write_text(json.dumps([["It's \"quoted\", ñ", "back\nline"]]), encoding="utf-8")
+    out = tmp_path / "deck.csv"
+    script = Path(__file__).resolve().parent.parent / "dojo" / "scripts" / "cards_csv.py"
+    r = subprocess.run([sys.executable, str(script), "--from-json", str(rows), str(out)],
+                       capture_output=True)
+    assert r.returncode == 0, r.stderr.decode(errors="replace")
+    assert parse_csv(out.read_text(encoding="utf-8")) == [("It's \"quoted\", ñ", "back\nline")]

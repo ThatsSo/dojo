@@ -24,7 +24,7 @@ Apply the repetition-target rule (**S12**): offer a Woodpecker set **only when t
 ### The cycle schedule
 1. **Cycle 1 (slow and careful, in the learning zone):** solve everything, working out the full solution. Check it, and study every miss until it's understood (S9: accuracy first).
 2. **Rest** a day or two.
-3. **Each later cycle:** the whole set again in about **half the time** of the previous cycle (halving), ideally down to 6–7 cycles. If halving is impossible, extend a little but keep the pressure on; compressing time is the point.
+3. **Each later cycle:** the whole set again in about **half the time** of the previous cycle (halving), ideally down to 6–7 cycles. If halving is impossible, extend a little but keep the pressure on; compressing time is the point, **as long as accuracy holds** (T1, S9). If accuracy drops, repeat the cycle at the same time limit before halving again.
 4. **Every re-solve must reproduce *why* the solution works,** not just recall the answer. Recalling "the answer was Nxf7" without seeing the idea doesn't count as solved.
 5. After the last cycle, move the most-missed items into spaced review (cards, S7) to maintain them.
 

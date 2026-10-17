@@ -5,8 +5,10 @@ UTF-8, front then back, no header row, standard CSV quoting. `**bold**` and
 line breaks inside quoted fields are rendered by the app.
 
 CLI: python cards_csv.py deck.csv   -> prints problems (exit 1) or "OK: N cards".
+     python cards_csv.py --from-json rows.json deck.csv   -> writes [[front, back], ...] then validates.
 """
 import csv
+import json
 import io
 import re
 import sys
@@ -113,8 +115,14 @@ def validate(text: str) -> list[str]:
 
 
 def main(argv: list[str]) -> int:
+    sys.stdout.reconfigure(errors="replace")
+    if len(argv) == 4 and argv[1] == "--from-json":
+        rows = [(str(f), str(b)) for f, b in json.loads(Path(argv[2]).read_text(encoding="utf-8"))]
+        write_csv(rows, argv[3])
+        argv = [argv[0], argv[3]]
     if len(argv) != 2:
-        print("usage: python cards_csv.py deck.csv")
+        print("usage: python cards_csv.py deck.csv\n"
+              "       python cards_csv.py --from-json rows.json deck.csv")
         return 2
     text = Path(argv[1]).read_text(encoding="utf-8-sig")
     problems = validate(text)
