@@ -60,3 +60,19 @@ def test_sources_lists_corrections():
     text = read("references/sources.md")
     for s in ["Biederman", "hypofrontality", "heuristic", "Herrigel", "VDIM", "anecdotal"]:
         assert s in text
+
+
+def test_skill_frontmatter_and_triggers():
+    text = read("SKILL.md")
+    assert text.startswith("---\nname: dojo\ndescription: ")
+    desc = text.split("description: ", 1)[1].split("\n", 1)[0].lower()
+    for t in ["teach", "learn", "flashcard", "woodpecker", "audit", "dojo lens"]:
+        assert t in desc, t
+    assert "ordinary question" in desc  # states the non-trigger
+    assert len(text.splitlines()) < 200
+
+
+def test_skill_links_every_reference():
+    text = read("SKILL.md")
+    for ref in REQUIRED_REFERENCES:
+        assert f"references/{ref}" in text, ref
