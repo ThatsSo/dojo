@@ -20,7 +20,7 @@ Flashcards serve the **Automate** stage: retrieval (S4) plus spacing (S7). They 
 ## The CSV format (James's `study.html` app)
 
 - UTF-8, **no BOM**.
-- Exactly **2 columns**: front, back. **No header row.**
+- Exactly **2 columns**: front, back, with no header row.
 - Standard CSV quoting: a field containing a comma, double quote or line break is wrapped in `"…"`, with inner quotes doubled (`""`).
 - `**bold**` renders as bold, but only within one line. Line breaks inside a quoted field render as line breaks.
 - Fields are trimmed.
