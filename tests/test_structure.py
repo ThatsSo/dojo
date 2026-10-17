@@ -115,8 +115,8 @@ def test_lens_optin_and_six_questions():
 
 def test_coach_files_and_session_flow():
     text = read("references/coach.md")
-    for s in [r"Documents\Learning", "plan.md", "log.md", "cards/", "woodpecker/",
-              "Session-only", "Long-running", "deadline"]:
+    for s in ["dojo_config.py", "DOJO_LEARNING_DIR", "dojo.json", "plan.md", "log.md",
+              "cards/", "woodpecker/", "Session-only", "Long-running", "deadline"]:
         assert s in text, s
 
 
@@ -124,3 +124,11 @@ def test_woodpecker_rule_cycles_and_benchmark():
     text = read("references/woodpecker.md")
     for s in ["S12", "why", "halv", "set.md", "cycles.md", "Benchmark", "weekly", "worst day"]:
         assert s in text, s
+
+
+def test_no_personal_paths_ship_in_skill():
+    for f in SKILL_DIR.rglob("*"):
+        if f.is_file() and f.suffix in {".md", ".py"}:
+            text = f.read_text(encoding="utf-8")
+            assert r"C:\Users\James" not in text, f
+            assert "James's machine" not in text, f

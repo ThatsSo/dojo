@@ -1,6 +1,6 @@
 ---
 name: dojo
-description: Use when designing, auditing or planning how something teaches or trains (the learning method of learning apps, practice tools, flashcard or drill systems, courses; not routine code, styling or refactors in them), when a project's CLAUDE.md or HANDOFF.md contains "Dojo lens: on", or when the user asks to learn something themselves ("teach me", "help me learn", "practice plan", "make flashcards", "Woodpecker set", "/dojo", "dojo this"). Applies James's pedagogy, a rigorous plan done with a Zen attitude. Do NOT use for an ordinary question the user just wants answered.
+description: Use when designing, auditing or planning how something teaches or trains (the learning method of learning apps, practice tools, flashcard or drill systems, courses; not routine code, styling or refactors in them), when a project's CLAUDE.md or HANDOFF.md contains "Dojo lens: on", or when the user asks to learn something themselves ("teach me", "help me learn", "practice plan", "make flashcards", "Woodpecker set", "/dojo", "dojo this"). Applies the Dojo pedagogy: a rigorous plan, done with a Zen attitude. Do NOT use for an ordinary question the user just wants answered.
 ---
 
 # Dojo

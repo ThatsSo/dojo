@@ -1,6 +1,6 @@
 """Read, write and validate two-column flashcard CSVs.
 
-The format matches the parser in James's study.html flashcard app:
+The format matches the parser in the author's study.html flashcard app:
 UTF-8, front then back, no header row, standard CSV quoting. `**bold**` and
 line breaks inside quoted fields are rendered by the app.
 

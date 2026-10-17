@@ -1,25 +1,32 @@
 # Coach mode
 
-Helping James learn something directly. Same model, same attitude: a rigorous plan, a Zen attitude. Read `principles.md` first.
+Helping the user learn something directly. Same model, same attitude: a rigorous plan, a Zen attitude. Read `principles.md` first.
 
 **Triggers:** "teach me…", "help me learn…", "open a dojo for X", "practice plan for…". Never triggered by an ordinary question (SKILL.md, hard rule 1).
 
 ## Pick the scope
 
-- **Session-only:** a one-off ("teach me how X works"). Nothing is saved unless he asks.
-- **Long-running:** a skill learned over weeks ("open a dojo for Spanish"). It gets a subject folder. If it's unclear which he wants, ask once.
+- **Session-only:** a one-off ("teach me how X works"). Nothing is saved unless they ask.
+- **Long-running:** a skill learned over weeks ("open a dojo for Spanish"). It gets a subject folder. If it's unclear which they want, ask once.
 
 ## Session-only flow
 
-1. **Goal in one line.** What should he be able to do by the end?
-2. **Explain briefly and concretely** (S5). Tie the new idea to something he already knows (S14 analogies). No theory dumps.
-3. **Have him produce it** (S4): explain it back in his own words, solve one example, or predict an outcome. Then give corrective feedback (S6).
-4. **One or two harder applications** at the edge of his level (S8).
+1. **Goal in one line.** What should they be able to do by the end?
+2. **Explain briefly and concretely** (S5). Tie the new idea to something they already know (S14 analogies). No theory dumps.
+3. **Have them produce it** (S4): explain it back in their own words, solve one example, or predict an outcome. Then give corrective feedback (S6).
+4. **One or two harder applications** at the edge of their level (S8).
 5. **Debrief** (see the debrief rules below). Offer cards *only* if the material is worth keeping long-term, and a Woodpecker set *only* if S12 says the patterns are the skill.
 
 ## Long-running: the subject folder
 
-`C:\Users\James\Documents\Learning\<subject>\`
+`<learning folder>/<subject>/`
+
+Find the learning folder by running `python "<skill>/scripts/dojo_config.py"`, where `<skill>` is this skill's folder. It resolves, in order:
+1. The `DOJO_LEARNING_DIR` environment variable.
+2. `"learning_dir"` in `~/.claude/dojo.json`, e.g. `{"learning_dir": "D:/Notes/Learning"}`.
+3. The default, `~/Documents/Learning`.
+
+If the user wants a different place, offer to write `~/.claude/dojo.json` for them.
 
 ```
 <subject>/
@@ -50,7 +57,7 @@ Create the folder on the first session. Read `plan.md` and the top of `log.md` a
 <diagnosed from the log and benchmarks; feeds the bottleneck add-on>
 
 ## Schedule (inputs, not outcomes)
-<when and how long he practises; no target dates for results>
+<when and how long they practise; no target dates for results>
 
 ## Benchmark
 <fixed set per category, cadence (default weekly), runs to average>
@@ -69,8 +76,8 @@ Create the folder on the first session. Read `plan.md` and the top of `log.md` a
 
 ### Each session
 
-1. **Check in on the process,** not the progress: did practice happen since last time? A missed session is information, never a failure to scold (A3, A7). If he's tired, offer an easy-day session; it still counts (T9).
-2. **Practise:** all-round practice at his level across categories (S3), plus one short, capped add-on for the current weak point (A4). Stay in the goldilocks zone: slow down before you push (S8, S9).
+1. **Check in on the process,** not the progress: did practice happen since last time? A missed session is information, never a failure to scold (A3, A7). If they're tired, offer an easy-day session; it still counts (T9).
+2. **Practise:** all-round practice at their level across categories (S3), plus one short, capped add-on for the current weak point (A4). Stay in the goldilocks zone: slow down before you push (S8, S9).
 3. **Revisit logged mistakes** from last time as targeted drills, in the learning zone (A3, T2).
 4. **Debrief and plan the next session.** Update `log.md`, adjust `plan.md` if the habit focus or weak points changed, and run the benchmark if it's due (S11).
 

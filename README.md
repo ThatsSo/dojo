@@ -38,10 +38,21 @@ macOS or Linux:
 ln -s "<repo>/dojo" ~/.claude/skills/dojo
 ```
 
+## Configuration
+
+Coach mode keeps long-running subjects in a learning folder, `~/Documents/Learning` by default. To use another place, set `DOJO_LEARNING_DIR`, or create `~/.claude/dojo.json`:
+
+```json
+{"learning_dir": "D:/Notes/Learning"}
+```
+
+`python dojo/scripts/dojo_config.py` prints the folder Dojo will use.
+
 ## Card tooling
 
 ```bash
 python dojo/scripts/cards_csv.py deck.csv                              # validate
+python dojo/scripts/cards_csv.py --from-json rows.json deck.csv        # write + validate
 python dojo/scripts/csv_to_apkg.py deck.csv "Deck Name" --reverse      # Anki package (pip install genanki)
 ```
 
@@ -61,7 +72,7 @@ dojo/
   references/coach.md      coaching flow + subject-folder templates
   references/cards.md      card rules + format
   references/woodpecker.md Woodpecker sets + benchmarks
-  scripts/                 cards_csv.py, csv_to_apkg.py
+  scripts/                 cards_csv.py, csv_to_apkg.py, dojo_config.py
 ```
 
 ## Development
@@ -75,7 +86,7 @@ Behavioural evals are in `evals/` (`evals.json` holds the prompts and assertions
 
 ## Sources
 
-The primary voice is the author's own essays on learning, Zen, flow and implicit vs. explicit learning. Supporting sources:
+The primary voice is the author's (James, a.k.a. ThatsSo) own essays on learning, Zen, flow and implicit vs. explicit learning. Supporting sources:
 
 - *Ultralearning* (Scott H. Young)
 - *Zen in the Art of Archery* (Eugen Herrigel)

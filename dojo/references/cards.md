@@ -17,7 +17,9 @@ Flashcards serve the **Automate** stage: retrieval (S4) plus spacing (S7). They 
 6. **Keep the back short.** One line ideally, with a second line for an example or reason if needed.
 7. **Wording is neutral and exact.** No trick questions. The card tests knowledge, not reading skill.
 
-## The CSV format (James's `study.html` app)
+## The CSV format (`study.html`-style apps)
+
+This matches the author's Study flashcard app, and it's a good general default: any two-column CSV importer accepts it.
 
 - UTF-8, **no BOM**.
 - Exactly **2 columns**: front, back, with no header row.
@@ -60,12 +62,12 @@ Example:
    - **Re-importing:** deck IDs come from the deck name and note IDs from the deck name plus the card front. Re-importing an edited deck therefore updates cards whose *back* changed. A card whose *front* changed arrives as a new card; delete the old one in Anki.
    - **Pick `--reverse` once per deck:** switching it later changes the note type.
 
-`<skill>` is this skill's folder, as an absolute path. On James's machine that's `C:\Users\James\.claude\skills\dojo`; elsewhere, expand `~/.claude/skills/dojo`.
+`<skill>` is this skill's folder as an absolute path (usually `~/.claude/skills/dojo`, with `~` expanded to the home folder).
 
 ## Where decks go
 
-- **For an app:** the project's own card folder. Read the project's AGENTS.md or CLAUDE.md first. For James's website, the live Study app is `Website/site/study/`: decks go in `site/study/cards/`, and the deck index is rebuilt with `python tools/build_deck_index.py`. `Website/Neocities/` is a read-only archive; never write there.
-- **For coach mode:** `Documents\Learning\<subject>\cards\`.
+- **For an app:** the project's own card folder. Read the project's AGENTS.md or CLAUDE.md first. For example, in the author's website the live Study app is `Website/site/study/`: decks go in `site/study/cards/`, and the deck index is rebuilt with `python tools/build_deck_index.py`. `Website/Neocities/` is a read-only archive; never write there.
+- **For coach mode:** `<learning folder>/<subject>/cards/` (see `coach.md` for how the learning folder is found).
 
 ## When auditing a card system
 
