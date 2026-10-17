@@ -82,3 +82,22 @@ def test_cards_md_documents_format():
     text = read("references/cards.md")
     for s in ["no header", "cards_csv.py", "csv_to_apkg.py"]:
         assert s in text, s
+
+
+def test_design_has_workflow_and_knowledge_table():
+    text = read("references/design.md")
+    for kind in ["Fact", "Concept", "Procedure", "Perceptual pattern",
+                 "Motor skill", "Strategic judgement"]:
+        assert f"| {kind} |" in text, kind
+    for s in ["learner's goal", "skill map", "learning zone", "performance zone",
+              "benchmark", "difficulty budget", "tensions.md"]:
+        assert s in text, s
+
+
+def test_audit_has_ratings_template_and_decision_rule():
+    text = read("references/audit.md")
+    for r in ["Strong", "Partial", "Missing", "Conflicts", "N/A"]:
+        assert r in text
+    for s in ["what the app is for", "HANDOFF.md", "Tensions with recorded decisions",
+              "docs/dojo-audit-", "Strengths", "file:line"]:
+        assert s in text, s
