@@ -62,7 +62,7 @@ Example:
 
 ## Where decks go
 
-- **For an app:** the project's own card folder. For the Neocities site that's `cards/`; after adding a deck there, it also needs an entry in the versioned `index.*.json` that `manifest.json` points to.
+- **For an app:** the project's own card folder. Read the project's AGENTS.md or CLAUDE.md first. For James's website, the live Study app is `Website/site/study/`: decks go in `site/study/cards/`, and the deck index is rebuilt with `python tools/build_deck_index.py`. `Website/Neocities/` is a read-only archive; never write there.
 - **For coach mode:** `Documents\Learning\<subject>\cards\`.
 
 ## When auditing a card system

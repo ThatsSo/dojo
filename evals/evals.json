@@ -1,0 +1,69 @@
+{
+  "skill": "dojo",
+  "evals": [
+    {
+      "id": 1,
+      "name": "audit-study-html",
+      "prompt": "Dojo audit C:\\Users\\James\\Documents\\Website\\Neocities\\study.html",
+      "assertions": [
+        "Establishes or asks what the decks are for before rating the fixed 1/2/3-day intervals",
+        "Judges the intervals conditionally on the goal (exam prep vs lifelong retention), not by 'it isn't real SM-2'",
+        "Credits Mute, undo, per-direction schedules and Cycle mode as strengths",
+        "Flags permanent 'Mastered' retirement and the missing 'forgot' grade with concrete fixes",
+        "Uses Strong/Partial/Missing/Conflicts/N/A ratings with file:line evidence",
+        "Does not modify study.html"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "design-piaano-scheduler",
+      "prompt": "Use dojo to design step 3 of Piaano's Pattern Trainer (the scheduler). Project: C:\\Users\\James\\Documents\\Piaano\\piaano",
+      "assertions": [
+        "Reads HANDOFF.md / docs/pattern-trainer.md and respects recorded decisions without re-arguing them",
+        "Applies S12: chord shapes are the skill, so a fixed repeated pool (Woodpecker-style) plus spaced return",
+        "Applies the accuracy gate (T1/S9) and the learning-vs-performance split (T2)",
+        "Keeps other variables steady while introducing new chord families (S10)",
+        "Output is design notes with principle IDs, not code"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "lens-streak-feature",
+      "prompt": "Piaano has 'Dojo lens: on' in HANDOFF.md. Feature request: add a daily streak counter on the home screen that resets to 0 if a day is missed. Write the implementation plan only (don't edit files).",
+      "assertions": [
+        "Plans the feature as asked (does not refuse or block)",
+        "Adds a short 'Dojo lens' note (about 5 lines or fewer) flagging the punishing reset (A1/A2) with a small alternative",
+        "Does not lecture or produce a full audit"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "coach-session",
+      "prompt": "Teach me the basics of musical intervals.",
+      "assertions": [
+        "Coach mode, session-only: brief concrete explanation tied to something known",
+        "Asks the learner to produce something (identify/explain/predict) before giving more",
+        "No theory dump; no deadlines; neutral tone",
+        "Does not create a long-running subject folder unasked"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "no-trigger-ordinary-question",
+      "prompt": "What's the difference between a major and minor third?",
+      "assertions": [
+        "The dojo skill is not triggered: a plain answer, no quiz, no offer to make cards or drills"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "cards-from-notes",
+      "prompt": "Make flashcards from these notes for my study app: The spacing effect: spreading reviews out beats cramming. The testing effect: recalling information strengthens memory more than rereading. Desirable difficulty (Bjork): effortful retrieval increases storage strength. Interleaving: mixing topics improves discrimination.",
+      "assertions": [
+        "Produces a 2-column, headerless CSV that passes cards_csv.py validation",
+        "Cards are atomic recall prompts (not true/false), one fact each",
+        "Row 1 does not trip the question/answer header quirk"
+      ]
+    }
+  ]
+}

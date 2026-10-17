@@ -69,9 +69,11 @@ Each finding gets a **concrete fix** sized to the codebase: name the function or
 - **Long audits** (more than about 10 findings, or a whole app) are saved to `docs/dojo-audit-YYYY-MM-DD.md` in the audited project; use the project's docs folder if it has another name. Reply with a short summary and the path.
 - **Short audits** (a single feature or file) can stay in chat.
 
-## Worked mini-example: `study.html`'s review intervals
+## Worked mini-example: the Study app's review intervals
 
-*Observed:*
+*Where:* the live app is `Website/site/study/index.html`; `Website/Neocities/study.html` is a read-only archive with the same logic. Audit the live copy, and target fixes there. Check the project's AGENTS.md for which folders are editable, and preserve the `flashcards:*` localStorage keys.
+
+*Observed (as of 2026-10):*
 - The "SM-2" mode uses fixed intervals of 1, 2 and 3 days for Hard, Medium and Easy (`REVIEW_DAYS`). A comment says they're kept short so nothing drifts far out.
 - "Mastered" retires a card from reviews permanently.
 - There's no grade for "I forgot".

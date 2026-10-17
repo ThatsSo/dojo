@@ -59,15 +59,17 @@ Design notes in the project's own style: its doc folder, headings and voice. Inc
 
 Keep principle IDs in parentheses so later agents can trace the reasoning.
 
-## Worked mini-example: Piaano's Pattern Trainer scheduler
+## Worked mini-example: a chord-recognition scheduler
 
-*Context:* Piaano's Pattern Trainer introduces chords and inversions in four steps (meet it, note by note, together with keys lit, together alone). Step 3, a scheduler, isn't built yet.
+*Context:* a scheduler for a pool of chord shapes read from notation. Piaano's Pattern Trainer has one, so **check the project's HANDOFF and design docs for what already exists before designing**. Often the right output is a short list of improvements to the built version, not a fresh design.
 
 - **Goal:** instant recognition and playing of chord shapes from notation, for sight-reading real music.
 - **Kind:** perceptual pattern plus motor skill.
-- **S12:** chord shapes *are* the skill, so a fixed set is right. Each introduced chord joins a Woodpecker-style pool that is cycled with shrinking time targets, plus spaced return (S7) so old chords don't fade.
-- **T1 / S9:** the time target tightens only while accuracy stays near-perfect; one miss eases it back.
-- **T2:** the scheduler runs in Wait (the learning zone: the miss is corrected on the spot). Misses also feed a short drill pool at the end of the session.
+- **S12:** chord shapes *are* the skill, so a fixed, repeated pool is right, plus spaced return (S7) so old chords don't fade.
+- **What counts as one item:** what the *learner* sees. Two items that are drawn identically on the staff are one recognition target. Two items that use the same keys but are spelled differently look different, so keep them separate.
+- **T1 / S9:** speed pressure rises only while accuracy holds. If the user has already set a target-time rule, keep it; Woodpecker-style compression is an optional extra, not a replacement.
+- **T2:** misses are corrected on the spot in a waiting mode (the learning zone), and they also feed a short drill pool.
 - **S10:** while a new chord family is being introduced, hold tempo and range steady.
-- **A6:** show per-chord consistency (slowest recent recognition), not only the best time.
-- **Leave alone:** HANDOFF's recorded decisions, for example no free-form climb and no ranks.
+- **S1:** measure per clef (or per hand) if the skill differs there. A strong treble shouldn't hide a weak bass.
+- **A6:** show per-chord consistency (slowest recent recognition) next to the median, not only the best time.
+- **Leave alone:** recorded decisions, for example Piaano's "no free-form climb, no ranks" and "due is counted in patterns played".
