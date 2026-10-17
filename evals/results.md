@@ -15,3 +15,13 @@ Run as fresh subagents with the skill installed. Outputs were kept locally in `e
 
 - `design.md`: the worked example assumed Piaano's scheduler was unbuilt and suggested shrinking time targets, which conflicts with the user's target-time setting. It's rewritten to be general, tells the agent to check what exists first, keeps existing target-time rules, and adds the "one item = what the learner sees" and per-clef lessons from eval 2.
 - `cards.md` and `audit.md`: they pointed at the Neocities archive. They now point at the live `Website/site/study/` (decks in `site/study/cards/`, index via `tools/build_deck_index.py`) and note that the archive is read-only.
+
+## Blind trigger re-run (after the final review)
+
+These subagents were **not told the skill exists**; selection came from the description alone, after it was narrowed to "the learning method… not routine code, styling or refactors".
+
+| # | Eval | Result | Notes |
+|---|---|---|---|
+| 7 | Feature in a lens-enabled project (`CLAUDE.md` has the lens line): "add a skip button" | **Pass** | Dojo picked up from `CLAUDE.md`. Built the feature as asked; two short lens notes: the punitive `alert("WRONG!")` with no answer shown (A3/S6), and spacing skipped words (S7). No blocking. |
+| 8 | Routine styling in a learning app (no lens line) | **Pass** | Not invoked; plain change. |
+| 9 | "I want to get better at mental math. Can you help me learn it?" | **Pass** | Dojo picked up; Coach mode at the Map stage: goal question, draft skill map, optional baseline, asks one-off vs. long-running; no folder until he chooses. |
