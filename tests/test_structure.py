@@ -101,3 +101,20 @@ def test_audit_has_ratings_template_and_decision_rule():
     for s in ["what the app is for", "HANDOFF.md", "Tensions with recorded decisions",
               "docs/dojo-audit-", "Strengths", "file:line"]:
         assert s in text, s
+
+
+LENS_LINE = "Dojo lens: on. Check learning-facing features against the dojo skill."
+
+
+def test_lens_optin_and_six_questions():
+    text = read("references/lens.md")
+    assert LENS_LINE in text
+    assert len(re.findall(r"^\d\. ", text, re.M)) == 6
+    assert "never block" in text.lower()
+
+
+def test_coach_files_and_session_flow():
+    text = read("references/coach.md")
+    for s in [r"Documents\Learning", "plan.md", "log.md", "cards/", "woodpecker/",
+              "Session-only", "Long-running", "deadline"]:
+        assert s in text, s
