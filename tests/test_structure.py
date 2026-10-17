@@ -21,3 +21,42 @@ def test_reference_files_exist():
 
 def test_skill_md_exists():
     assert (SKILL_DIR / "SKILL.md").is_file()
+
+
+FIELDS = ["**What it says:**", "**Why:**", "**Signals present:**",
+          "**Signals absent:**", "**Misapplications:**", "**Evidence:**"]
+
+
+def test_principles_have_all_ids_and_fields():
+    text = read("references/principles.md")
+    ids = [f"S{i}" for i in range(1, 15)] + [f"A{i}" for i in range(1, 8)]
+    for pid in ids:
+        assert f"### {pid}. " in text, pid
+    for block in text.split("\n### ")[1:]:
+        for f in FIELDS:
+            assert f in block, (block[:20], f)
+
+
+def test_evidence_levels_are_valid():
+    levels = re.findall(r"\*\*Evidence:\*\* (\w+)", read("references/principles.md"))
+    assert len(levels) == 21
+    assert set(levels) <= {"established", "practitioner", "philosophy", "hypothesis"}
+
+
+def test_principles_has_thesis_and_arc():
+    text = read("references/principles.md")
+    assert "A rigorous plan, done with a Zen attitude" in text
+    for stage in ["Map", "Acquire", "Automate", "Perform", "Review"]:
+        assert f"**{stage}" in text
+
+
+def test_tensions_table_has_ten_rows():
+    text = read("references/tensions.md")
+    for i in range(1, 11):
+        assert f"| T{i} |" in text
+
+
+def test_sources_lists_corrections():
+    text = read("references/sources.md")
+    for s in ["Biederman", "hypofrontality", "heuristic", "Herrigel", "VDIM", "anecdotal"]:
+        assert s in text
