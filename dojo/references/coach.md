@@ -77,7 +77,7 @@ Create the folder on the first session. Read `plan.md` and the top of `log.md` a
 ### Each session
 
 1. **Check in on the process,** not the progress: did practice happen since last time? A missed session is information, never a failure to scold (A3, A7). If they're tired, offer an easy-day session; it still counts (T9).
-2. **Practise:** all-round practice at their level across categories (S3), plus one short, capped add-on for the current weak point (A4). Stay in the goldilocks zone: slow down before you push (S8, S9).
+2. **Practise:** all-round practice at their level across categories (S3), plus one short, capped add-on for the current weak point (A4). Stay in the goldilocks zone: slow down before you push (S8, S9). Give each drill a one-line **why this drill**: the concept behind it, e.g. "slow and accurate first, because repeated errors become habits". The learner then learns the method, not just the material.
 3. **Revisit logged mistakes** from last time as targeted drills, in the learning zone (A3, T2).
 4. **Debrief and plan the next session.** Update `log.md`, adjust `plan.md` if the habit focus or weak points changed, and run the benchmark if it's due (S11).
 

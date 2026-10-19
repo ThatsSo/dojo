@@ -132,3 +132,23 @@ def test_no_personal_paths_ship_in_skill():
             text = f.read_text(encoding="utf-8")
             assert r"C:\Users\James" not in text, f
             assert "James's machine" not in text, f
+
+
+def test_skill_requires_shown_reasoning_with_adjustable_depth():
+    text = read("SKILL.md")
+    assert "Show the reasoning" in text
+    for s in ["concept", "explain more", "just do it", "IDs are citations"]:
+        assert s in text, s
+
+
+def test_audit_has_approval_step():
+    text = read("references/audit.md")
+    for s in ["## Approval", "Is this a good idea", "never implement a fix",
+              "**Concept:**", "approve", "one decision at a time"]:
+        assert s in text, s
+
+
+def test_other_modes_explain_concepts():
+    assert "**Why:**" in read("references/design.md")
+    assert "concept in words" in read("references/lens.md")
+    assert "why this drill" in read("references/coach.md").lower()

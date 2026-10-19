@@ -28,7 +28,11 @@ Break the skill into **categories** and **subcategories** that each isolate one 
 For every feature, decide which stage(s) of the arc it serves: Map, Acquire, Automate, Perform or Review. Note which stages the app deliberately leaves to other tools, and say so. A good app needn't do everything, but it shouldn't pretend to.
 
 ### 4. Design the loop
-Go through this checklist and write down a decision for each item:
+Go through this checklist and write down a decision for each item. Write each one with a **Why:** that names the concept in plain words and says how it serves this learner (SKILL.md, hard rule 8). For example:
+
+> **Accuracy gate:** tempo rises only after a clean run and drops after two misses. **Why:** repeated errors become habits, so speed has to follow accuracy. Raising tempo while mistakes still happen trains the mistakes (S9, T1).
+
+The checklist:
 
 - **Default session:** covers all categories at the learner's level (S3). How long is it (A4)? How quick is it to start (A2)?
 - **Bottleneck add-on:** how the weakest subcategory is found and drilled in a short, capped block, then folded back in (S3, A4).
@@ -57,7 +61,9 @@ Design notes in the project's own style: its doc folder, headings and voice. Inc
 5. The tensions check.
 6. Open questions for the user (only genuine decisions).
 
-Keep principle IDs in parentheses so later agents can trace the reasoning.
+Every loop decision carries its **Why:**. Keep principle IDs in parentheses after the explanation so later agents can trace it, but never let an ID stand in for the explanation.
+
+**Approval:** the design is a proposal. Before building, walk the user through the decisions that change behaviour, one at a time with your recommendation first, and ask "Is this a good idea?" (same rules as the Approval section of `audit.md`).
 
 ## Worked mini-example: a chord-recognition scheduler
 

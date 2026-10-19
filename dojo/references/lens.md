@@ -30,7 +30,7 @@ Before finishing a learner-facing change, ask:
 ## Output rules
 
 - **Report only real concerns.** If all six questions are fine, say nothing about the lens.
-- **At most about five lines,** in the agent's normal final report, under a "Dojo lens" heading. Each line gives the concern, the principle ID, and the smallest fix.
+- **At most about five lines,** in the agent's normal final report, under a "Dojo lens" heading. Each line gives the concern, the concept in words (one short clause, e.g. "punishing a missed day turns a habit into a guilt trip"), the principle ID, and the smallest fix. Lens notes are suggestions; never apply them without the user's go-ahead.
 - **Never block work.** A concern is advice. The feature ships as the user asked unless they choose otherwise.
 - **Never re-argue recorded decisions.** If a concern touches a decision in HANDOFF.md or DECISIONS.md, either skip it or mention it once as a known trade-off.
 - **Bigger issues** (a concern that touches the app's core loop) get one line suggesting a Dojo audit or design pass, not an essay.

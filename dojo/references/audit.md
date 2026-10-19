@@ -34,6 +34,22 @@ Severity is about the effect on the learner, given the goal:
 
 Each finding gets a **concrete fix** sized to the codebase: name the function or screen and the change, not "consider improving".
 
+Each finding and each strength also gets a **Concept** line: the learning idea behind it, in plain words, and how it works (SKILL.md, hard rule 8). The reader should understand *why* without opening `principles.md`. Explain a concept fully the first time it appears in the report; later findings can name it briefly.
+
+## Approval
+
+An audit produces **proposals**, not changes. The user decides what is acted on.
+
+1. **Confirm the goal first** (workflow step 1). It decides every rating, so it's the first approval.
+2. **After presenting the findings, ask about them before touching anything.** Ask one decision at a time, starting with the highest severity:
+   - Restate the finding in one line, with the concept and your recommendation.
+   - Ask plainly: **"Is this a good idea? Do you approve this fix?"**
+   - Offer realistic answers: approve, approve with a change, skip, or "not now". If a question tool is available (e.g. AskUserQuestion), use it, putting the recommended option first.
+3. **Record the answers** in the report: mark each finding *Approved*, *Approved with changes: …*, *Skipped* or *Deferred*. Skipped findings stay in the report so later audits don't raise them again as new.
+4. **Nothing unapproved gets built:** never implement a fix the user hasn't approved, and never treat approval of one fix as approval of the next. "Fix them all" counts as approval of every listed fix, exactly as written.
+5. **Before implementing an approved fix, confirm the specifics if any judgement is left:** values, wording, defaults, caps. For example, "Cap AUD at 7 days and everything else at 120 — good?" Show the decision, its concept and the trade-off, then ask.
+6. **A batch approval is fine when the user asks for one.** If the user says "just do it" or "brief", ask once for the whole list ("Approve findings 1–4?") instead of one at a time. The approval step still happens.
+
 ## Report template
 
 ```markdown
@@ -43,13 +59,15 @@ Each finding gets a **concrete fix** sized to the codebase: name the function or
 <learner, skill, real context, time horizon; note if confirmed by the user or inferred>
 
 ## Strengths
-- <principle ID> <what works> (`file:line`)
+- <what works> (`file:line`). **Concept:** <the learning idea it embodies, in plain words> (<principle ID>)
 
 ## Findings
 1. **[High] <title>** (<principle IDs>)
    - Evidence: `file:line`, <what the code does>
-   - Why it matters for this goal: <reasoning>
-   - Fix: <specific change>
+   - **Concept:** <the learning idea, what it is and how it works, in plain words; full the first time, brief after>
+   - Why it matters for this goal: <how the concept applies to this learner and goal>
+   - Fix: <specific change>, with its trade-off and evidence level if they matter
+   - Decision: <Pending | Approved | Approved with changes: … | Skipped | Deferred>
 2. …
 
 ## Tensions with recorded decisions
@@ -63,6 +81,9 @@ Each finding gets a **concrete fix** sized to the codebase: name the function or
 
 ## Summary
 <3–5 sentences: overall shape, the top two fixes, what to leave alone>
+
+## Next: your decisions
+<the findings awaiting approval, highest severity first; ask about them one at a time (see Approval)>
 ```
 
 **Where it goes:**

@@ -45,3 +45,22 @@ Modes combine. For example, Design often ends with Cards or Woodpecker, and Coac
 5. **Tag claims with their evidence level** (established, practitioner, philosophy, hypothesis) when it matters. Don't present hypotheses or heuristics as settled science (see `references/sources.md`).
 6. **Keep the attitude in the product, not just the plan.** Neutral feedback, process-first metrics, goals the learner owns, no guilt mechanics (A1–A7).
 7. **Write for whoever reads it next.** Design notes and audits go in the project's own doc style; long audits are saved as files (see `audit.md`).
+8. **Show the reasoning.** Never just *do* the pedagogy; say why. Write each decision as:
+   - the **decision**;
+   - the **concept** behind it, in plain words (what it is and how it works);
+   - **why it applies here**, tied to this learner's goal;
+   - the **trade-off or evidence level**, when it matters.
+
+   IDs are citations, not explanations: "(S7)" alone explains nothing to a reader who hasn't memorized `principles.md`. Explain a concept fully the first time it appears in a document or conversation, then refer to it briefly.
+
+   Example: *Intervals now grow. Spacing effect: each successful recall makes a memory fade more slowly, so the next review can come later without being forgotten. These decks are meant to last years, so fixed 3-day reviews spend time re-learning what you'd still remember (S7, established).*
+
+   This applies in every mode: chat summaries, reports, design notes, lens notes and coaching. Explaining the concept is also how the user learns the model (S4: teaching; S14: explicit cues speed up implicit judgement).
+
+   **Depth is adjustable per request:**
+   - **Standard (default):** one or two sentences of concept per decision, as in the example.
+   - **Deep:** when the user says "explain more", "go deeper" or "why?", give a short paragraph per decision, including the source behind it (see `references/sources.md`).
+   - **Brief:** when the user says "just do it", "skip the explanations" or "brief", give one clause per decision (concept name plus the reason), never a bare ID.
+
+   The depth lasts for that task; the next task returns to standard unless the user says otherwise.
+9. **Ask before acting on a judgement call.** Findings and design choices are proposals until the user approves them. Ask "Is this a good idea?" about each one that changes behaviour, one decision at a time, with your recommendation first (see the Approval section of `references/audit.md`).
