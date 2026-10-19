@@ -25,3 +25,12 @@ These subagents were **not told the skill exists**; selection came from the desc
 | 7 | Feature in a lens-enabled project (`CLAUDE.md` has the lens line): "add a skip button" | **Pass** | Dojo picked up from `CLAUDE.md`. Built the feature as asked; two short lens notes: the punitive `alert("WRONG!")` with no answer shown (A3/S6), and spacing skipped words (S7). No blocking. |
 | 8 | Routine styling in a learning app (no lens line) | **Pass** | Not invoked; plain change. |
 | 9 | "I want to get better at mental math. Can you help me learn it?" | **Pass** | Dojo picked up; Coach mode at the Map stage: goal question, draft skill map, optional baseline, asks one-off vs. long-running; no folder until he chooses. |
+
+## Show-the-reasoning and approval re-run (2026-10-19)
+
+After adding hard rules 8 (show the reasoning, adjustable depth) and 9 (ask before acting), plus audit.md's Approval section. Not told the skill exists.
+
+| # | Eval | Result | Notes |
+|---|---|---|---|
+| 10 | "Dojo audit" of a small vocab page, standard depth | **Pass** | Every strength and finding has a plain-words **Concept:** line (e.g. "retrieval practice, also called the testing effect: pulling a word out of memory strengthens it far more than rereading it…") with the ID and evidence level only as citations. Each finding is marked Decision: Pending. Stops and asks about the top finding alone: "Is this a good idea? Do you approve this fix?", with approve / approve with a change / skip / later. File unchanged. |
+| 11 | Same audit, "keep it brief, just do it" | **Pass** | Brief: one-clause concepts per finding, never a bare ID. Asks once for the whole list ("Approve findings 1–6 as written?"), as the brief rule allows. File unchanged. |
