@@ -1,6 +1,6 @@
 # Dojo
 
-A [Claude Code](https://claude.com/claude-code) skill for designing, auditing and practising learning, built on one coherent pedagogy:
+An [Agent Skill](https://agentskills.io) for Claude Code, Codex and ChatGPT, for designing, auditing and practising learning, built on one coherent pedagogy:
 
 > **A rigorous plan, done with a Zen attitude.**
 
@@ -12,7 +12,7 @@ Modern learning research decides the *structure*: what to practise, when, and at
 |---|---|
 | **Design** | Shaping a new learning app, feature, course or practice system |
 | **Audit** | Judging an existing one *conceptually*, against the learner's goal, with ranked findings and fixes |
-| **Lens** | Light, never-blocking checks during feature work in projects that opt in (`Dojo lens: on. Check learning-facing features against the dojo skill.` in `CLAUDE.md` or `HANDOFF.md`) |
+| **Lens** | Light, never-blocking checks during feature work in projects that opt in (`Dojo lens: on. Check learning-facing features against the dojo skill.` in `AGENTS.md`, `CLAUDE.md` or `HANDOFF.md`) |
 | **Coach** | Learning something yourself, one session at a time or as a long-running subject with a plan, a log, decks and problem sets |
 
 Plus three tools:
@@ -20,27 +20,46 @@ Plus three tools:
 - **Woodpecker sets:** repeated problem sets with time limits that halve each cycle.
 - **Benchmarks:** fixed tests that measure without becoming the training.
 
-Dojo triggers on teaching and learning work, and on `/dojo` or "dojo this". It deliberately does **not** turn ordinary questions into lessons.
+Dojo triggers on teaching and learning work, and on `/dojo` (Claude Code), `$dojo` (Codex), `@dojo` (ChatGPT) or "dojo this". It deliberately does **not** turn ordinary questions into lessons.
 
 ## Install
 
-Clone the repo, then link or copy the `dojo/` folder into your personal skills folder.
+Clone the repo, then link the `dojo/` folder into each tool's skills folder. A link (rather than a copy) means every tool picks up edits to the repo straight away.
 
-Windows (a junction, so edits are picked up live; no admin rights needed):
+### Claude Code
 
 ```powershell
 New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\dojo" -Target "<repo>\dojo"
 ```
 
-macOS or Linux:
+macOS or Linux: `ln -s "<repo>/dojo" ~/.claude/skills/dojo`
+
+### Codex (app and CLI)
+
+```powershell
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.codex\skills\dojo" -Target "<repo>\dojo"
+```
+
+macOS or Linux: `ln -s "<repo>/dojo" ~/.codex/skills/dojo`. Restart Codex, then call it with `$dojo` or just describe the task. `dojo/agents/openai.yaml` gives it a name and starter prompt in Codex's skill list.
+
+### ChatGPT
+
+Build the upload files:
 
 ```bash
-ln -s "<repo>/dojo" ~/.claude/skills/dojo
+python tools/package_chatgpt.py
 ```
+
+This writes `dist/dojo-skill.zip` and `dist/chatgpt-project/`.
+
+- **If your ChatGPT has Skills** (Settings → Skills, or "Build me a skill…" in a chat): upload `dist/dojo-skill.zip` and turn it on. Use it with `@dojo`, or let ChatGPT pick it up automatically. Skills don't sync between products, so re-upload after changes.
+- **Otherwise, use a Project or Custom GPT:** paste `dist/chatgpt-project/instructions.md` into the instructions, and upload every file in `dist/chatgpt-project/knowledge/` as a knowledge file.
+
+ChatGPT can't see your files or run Dojo's scripts. It audits what you paste or upload, keeps coach plans in the chat or project, and writes flashcard CSVs directly.
 
 ## Configuration
 
-Coach mode keeps long-running subjects in a learning folder, `~/Documents/Learning` by default. To use another place, set `DOJO_LEARNING_DIR`, or create `~/.claude/dojo.json`:
+Coach mode keeps long-running subjects in a learning folder, `~/Documents/Learning` by default. To use another place, set `DOJO_LEARNING_DIR`, or create `~/.dojo.json` (read by every tool; `~/.claude/dojo.json` and `~/.codex/dojo.json` also work):
 
 ```json
 {"learning_dir": "D:/Notes/Learning"}
@@ -73,6 +92,9 @@ dojo/
   references/cards.md      card rules + format
   references/woodpecker.md Woodpecker sets + benchmarks
   scripts/                 cards_csv.py, csv_to_apkg.py, dojo_config.py
+  agents/openai.yaml       Codex display name and starter prompt
+chatgpt/                   instructions for the ChatGPT Project / Custom GPT version
+tools/package_chatgpt.py   builds the ChatGPT upload files into dist/
 ```
 
 ## Development

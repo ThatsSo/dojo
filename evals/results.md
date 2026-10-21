@@ -34,3 +34,13 @@ After adding hard rules 8 (show the reasoning, adjustable depth) and 9 (ask befo
 |---|---|---|---|
 | 10 | "Dojo audit" of a small vocab page, standard depth | **Pass** | Every strength and finding has a plain-words **Concept:** line (e.g. "retrieval practice, also called the testing effect: pulling a word out of memory strengthens it far more than rereading it…") with the ID and evidence level only as citations. Each finding is marked Decision: Pending. Stops and asks about the top finding alone: "Is this a good idea? Do you approve this fix?", with approve / approve with a change / skip / later. File unchanged. |
 | 11 | Same audit, "keep it brief, just do it" | **Pass** | Brief: one-clause concepts per finding, never a bare ID. Asks once for the whole list ("Approve findings 1–6 as written?"), as the brief rule allows. File unchanged. |
+
+## Codex (2026-10-21)
+
+Installed by junction at `~/.codex/skills/dojo`; run with the desktop app's bundled `codex.exe` (codex-cli 0.163.0-alpha), `exec -s read-only`, not told the skill exists.
+
+| # | Eval | Result | Notes |
+|---|---|---|---|
+| 12 | "I want to get better at mental math. Can you help me learn it?" | **Pass** | Codex loaded `~/.codex/skills/dojo/SKILL.md` itself and coached in Dojo style: asked the goal and one-off vs. ongoing, named the stage ("learning stage: one technique, no timer"), explained why the technique works, and framed mistakes as information. |
+
+Found while preparing: the old unquoted `description:` contained `: ` and wasn't valid strict YAML, which Codex rejects. Now quoted, and `test_frontmatter_is_strict_yaml` guards it.
