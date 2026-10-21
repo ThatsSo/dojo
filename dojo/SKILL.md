@@ -1,6 +1,6 @@
 ---
 name: dojo
-description: Use when designing, auditing or planning how something teaches or trains (the learning method of learning apps, practice tools, flashcard or drill systems, courses; not routine code, styling or refactors in them), when a project's CLAUDE.md or HANDOFF.md contains "Dojo lens: on", or when the user asks to learn something themselves ("teach me", "help me learn", "practice plan", "make flashcards", "Woodpecker set", "/dojo", "dojo this"). Applies the Dojo pedagogy: a rigorous plan, done with a Zen attitude. Do NOT use for an ordinary question the user just wants answered.
+description: 'Use when designing, auditing or planning how something teaches or trains (the learning method of learning apps, practice tools, flashcard or drill systems, courses; not routine code, styling or refactors in them), when a project''s AGENTS.md, CLAUDE.md or HANDOFF.md contains "Dojo lens: on", or when the user asks to learn something themselves ("teach me", "help me learn", "practice plan", "make flashcards", "Woodpecker set", "/dojo", "$dojo", "@dojo", "dojo this"). Applies the Dojo pedagogy: a rigorous plan, done with a Zen attitude. Do NOT use for an ordinary question the user just wants answered.'
 ---
 
 # Dojo
@@ -29,12 +29,22 @@ Read as needed:
 |---|---|---|
 | A new learning app, feature, course or practice system designed | **Design** | `references/design.md` |
 | An existing learning app, feature or file judged or upgraded ("dojo audit") | **Audit** | `references/audit.md` |
-| Feature work in a project whose CLAUDE.md or HANDOFF.md says `Dojo lens: on` | **Lens** | `references/lens.md` |
+| Feature work in a project whose AGENTS.md, CLAUDE.md or HANDOFF.md says `Dojo lens: on` | **Lens** | `references/lens.md` |
 | To learn something themselves ("teach me", "open a dojo for X", "practice plan") | **Coach** | `references/coach.md` |
 | Flashcards or an Anki deck | **Cards** | `references/cards.md` (scripts in `scripts/`) |
 | A Woodpecker set, repeated problem sets, or a benchmark/test set | **Woodpecker / Benchmark** | `references/woodpecker.md` |
 
 Modes combine. For example, Design often ends with Cards or Woodpecker, and Coach uses all three tools.
+
+## Where Dojo runs
+
+Dojo is a standard Agent Skill, so it works in Claude Code, Codex and ChatGPT. Adapt to what the tool can do:
+
+- **Can read and edit the user's files** (Claude Code, Codex): use every mode as written, including saving reports, coach subject folders and running `scripts/`.
+- **Can't reach the user's files** (ChatGPT chat): audit and design from what the user pastes or uploads; ask for the relevant files rather than guessing. Coach mode keeps the plan and log in the conversation or project instead of a folder. Return reports and card decks as downloadable files, or in the reply if downloads aren't available.
+- **Can't run scripts:** write card CSVs directly in the format in `references/cards.md` and check them by hand against its rules (two columns, no header, quoting, the row-1 quirk).
+- **No question tool:** ask approval questions in plain text, one at a time, with your recommendation first.
+- **Invoking it:** `/dojo` in Claude Code, `$dojo` in Codex, `@dojo` in ChatGPT, or just describe the task.
 
 ## Hard rules
 

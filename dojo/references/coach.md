@@ -23,10 +23,11 @@ Helping the user learn something directly. Same model, same attitude: a rigorous
 
 Find the learning folder by running `python "<skill>/scripts/dojo_config.py"`, where `<skill>` is this skill's folder. It resolves, in order:
 1. The `DOJO_LEARNING_DIR` environment variable.
-2. `"learning_dir"` in `~/.claude/dojo.json`, e.g. `{"learning_dir": "D:/Notes/Learning"}`.
-3. The default, `~/Documents/Learning`.
+2. `"learning_dir"` in `~/.dojo.json`, e.g. `{"learning_dir": "D:/Notes/Learning"}` (read by every tool).
+3. The same setting in `~/.claude/dojo.json` or `~/.codex/dojo.json`.
+4. The default, `~/Documents/Learning`.
 
-If the user wants a different place, offer to write `~/.claude/dojo.json` for them.
+If the user wants a different place, offer to write `~/.dojo.json` for them. In a tool with no file access (ChatGPT chat), keep `plan.md` and `log.md` as sections in the conversation or project instead.
 
 ```
 <subject>/

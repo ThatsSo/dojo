@@ -2,8 +2,9 @@
 
 Precedence:
   1. DOJO_LEARNING_DIR environment variable
-  2. "learning_dir" in ~/.claude/dojo.json
-  3. ~/Documents/Learning (default)
+  2. "learning_dir" in ~/.dojo.json (works for every tool)
+  3. "learning_dir" in ~/.claude/dojo.json, then ~/.codex/dojo.json
+  4. ~/Documents/Learning (default)
 
 CLI: python dojo_config.py   -> prints the resolved folder.
 """
@@ -24,13 +25,13 @@ def learning_dir(env=None, home=None) -> Path:
     home = Path.home() if home is None else Path(home)
     if env.get("DOJO_LEARNING_DIR"):
         return _expand(env["DOJO_LEARNING_DIR"], home)
-    config = home / ".claude" / "dojo.json"
-    try:
-        value = json.loads(config.read_text(encoding="utf-8")).get("learning_dir")
-        if value:
-            return _expand(value, home)
-    except (OSError, ValueError, AttributeError):
-        pass
+    for config in (home / ".dojo.json", home / ".claude" / "dojo.json", home / ".codex" / "dojo.json"):
+        try:
+            value = json.loads(config.read_text(encoding="utf-8")).get("learning_dir")
+            if value:
+                return _expand(value, home)
+        except (OSError, ValueError, AttributeError):
+            pass
     return home / "Documents" / "Learning"
 
 

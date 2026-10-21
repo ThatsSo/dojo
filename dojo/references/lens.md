@@ -4,7 +4,7 @@ A light, ongoing check during normal feature work in projects that opt in. It's 
 
 ## Opt-in
 
-A project turns the lens on with this line in its `CLAUDE.md` or `HANDOFF.md`:
+A project turns the lens on with this line in its `AGENTS.md`, `CLAUDE.md` or `HANDOFF.md` (whichever project-instructions file the tool reads):
 
 ```
 Dojo lens: on. Check learning-facing features against the dojo skill.

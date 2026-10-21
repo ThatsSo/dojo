@@ -34,3 +34,16 @@ def test_bad_config_file_falls_back_to_default(tmp_path):
 def test_tilde_is_expanded(tmp_path):
     env = {"DOJO_LEARNING_DIR": "~/Notes"}
     assert learning_dir(env=env, home=tmp_path) == tmp_path / "Notes"
+
+
+def test_neutral_config_file_preferred_over_claude_one(tmp_path):
+    (tmp_path / ".claude").mkdir()
+    (tmp_path / ".claude" / "dojo.json").write_text('{"learning_dir": "' + str(tmp_path / "Old").replace("\\", "/") + '"}', encoding="utf-8")
+    (tmp_path / ".dojo.json").write_text('{"learning_dir": "' + str(tmp_path / "New").replace("\\", "/") + '"}', encoding="utf-8")
+    assert learning_dir(env={}, home=tmp_path) == tmp_path / "New"
+
+
+def test_codex_config_file_is_read(tmp_path):
+    (tmp_path / ".codex").mkdir()
+    (tmp_path / ".codex" / "dojo.json").write_text('{"learning_dir": "' + str(tmp_path / "Cx").replace("\\", "/") + '"}', encoding="utf-8")
+    assert learning_dir(env={}, home=tmp_path) == tmp_path / "Cx"

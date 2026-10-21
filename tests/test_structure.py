@@ -152,3 +152,32 @@ def test_other_modes_explain_concepts():
     assert "**Why:**" in read("references/design.md")
     assert "concept in words" in read("references/lens.md")
     assert "why this drill" in read("references/coach.md").lower()
+
+
+def test_tool_neutral_skill():
+    text = read("SKILL.md")
+    desc = text.split("description: ", 1)[1].split("\n", 1)[0]
+    assert len(desc) <= 1024
+    assert "$dojo" in desc
+    for s in ["AGENTS.md", "## Where Dojo runs", "Codex", "ChatGPT"]:
+        assert s in text, s
+    assert "AGENTS.md" in read("references/lens.md")
+    assert "~/.dojo.json" in read("references/coach.md")
+
+
+def test_codex_metadata():
+    meta = read("agents/openai.yaml")
+    assert 'display_name: "Dojo"' in meta
+    short = re.search(r'short_description: "([^"]+)"', meta).group(1)
+    assert 25 <= len(short) <= 64
+    assert "$dojo" in meta
+
+
+def test_frontmatter_is_strict_yaml():
+    import yaml
+    text = read("SKILL.md")
+    front = text.split("---\n", 2)[1]
+    meta = yaml.safe_load(front)
+    assert meta["name"] == "dojo"
+    assert "Dojo lens: on" in meta["description"]
+    assert yaml.safe_load(read("agents/openai.yaml"))["interface"]["display_name"] == "Dojo"

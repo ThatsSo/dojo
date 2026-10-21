@@ -1,0 +1,7 @@
+interface:
+  display_name: "Dojo"
+  short_description: "Design, audit and practise learning, the Dojo way"
+  default_prompt: "Use $dojo to audit how this project teaches and suggest improvements."
+
+policy:
+  allow_implicit_invocation: true
