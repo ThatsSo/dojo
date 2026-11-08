@@ -6,7 +6,7 @@ SKILL_DIR = Path(__file__).resolve().parent.parent / "dojo"
 
 REQUIRED_REFERENCES = [
     "principles.md", "tensions.md", "sources.md", "design.md", "audit.md",
-    "lens.md", "coach.md", "cards.md", "woodpecker.md",
+    "lens.md", "coach.md", "cards.md", "woodpecker.md", "research.md",
 ]
 
 
@@ -194,3 +194,11 @@ def test_s15_and_enriched_s14():
     t = read("references/tensions.md")
     assert t.count("progressive overload") >= 2
     assert "S1–S15" in read("SKILL.md")
+
+
+def test_research_reference():
+    text = read("references/research.md")
+    for s in ["## When to research", "official", "weights", "format", "pass mark",
+              "sample", "cite", "Without web access", "skill map"]:
+        assert s in text, s
+    assert "references/research.md" in read("SKILL.md")

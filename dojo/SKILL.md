@@ -31,6 +31,7 @@ Read as needed:
 | An existing learning app, feature or file judged or upgraded ("dojo audit") | **Audit** | `references/audit.md` |
 | Feature work in a project whose AGENTS.md, CLAUDE.md or HANDOFF.md says `Dojo lens: on` | **Lens** | `references/lens.md` |
 | To learn something themselves ("teach me", "open a dojo for X", "practice plan") | **Coach** | `references/coach.md` |
+| To prepare for a specific exam, certification, grade or syllabus | **Research** (a Planning step inside Coach or Design) | `references/research.md` |
 | Flashcards or an Anki deck | **Cards** | `references/cards.md` (scripts in `scripts/`) |
 | A Woodpecker set, repeated problem sets, or a benchmark/test set | **Woodpecker / Benchmark** | `references/woodpecker.md` |
 
