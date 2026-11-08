@@ -18,6 +18,7 @@ Read **principles.md** before anything else: the structure principles (S1–S15)
 - **audit.md**: judging an existing one, including the report format and the Approval section.
 - **lens.md**: quick checks during feature work, when the user's project says "Dojo lens: on".
 - **coach.md**: when the user wants to learn something themselves.
+- **research.md**: when the goal is a specific exam, certification, grade or syllabus: look up the official outline before planning.
 - **cards.md**: flashcards and Anki decks.
 - **woodpecker.md**: Woodpecker sets (repeated problem sets) and benchmarks.
 

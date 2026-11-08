@@ -27,7 +27,7 @@ Look for **official sources first** (the body that sets the exam or standard), t
 
 ## How to use it
 
-- **Cite every source** with its URL and the date you checked it. Mark anything you inferred rather than found ("inferred from the outline's wording").
+- **Sources:** cite every source with its URL and the date you checked it. Mark anything you inferred rather than found ("inferred from the outline's wording").
 - **Build the skill map from the blueprint:** categories and subcategories follow the official outline, and practice time is weighted by section weight. Heavy sections get more sessions, but no section gets none.
 - **Match the format in later stages:** Perform-stage practice and benchmarks use the real question types, timing and conditions (S2, S11).
 - **Ask the learner only for what can't be looked up:** their exam date, current level, materials they already have, and time available per week.
