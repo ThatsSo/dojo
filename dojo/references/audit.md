@@ -13,7 +13,7 @@ Before judging anything, write down **what the app is for**: the learner, the sk
 Read HANDOFF.md, DECISIONS.md, CLAUDE.md, specs and code comments that explain choices. A recorded user decision is a constraint. A finding that contradicts one goes in **Tensions with recorded decisions**, stated once with the trade-off, and is never argued again.
 
 ### 3. Rate each relevant principle
-For each of S1–S14 and A1–A7 that applies, give one rating:
+For each of S1–S15 and A1–A7 that applies, give one rating:
 
 - **Strong:** the app embodies it well. Say so and say where.
 - **Partial:** present but incomplete or inconsistent.

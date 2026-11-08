@@ -17,7 +17,7 @@ A pedagogy skill. **Thesis: a rigorous plan, done with a Zen attitude.** Modern 
 
 ## Always read first
 
-`references/principles.md`: the 14 structure principles (S1–S14), the 7 attitude principles (A1–A7) and the arc in full. Every mode cites these IDs.
+`references/principles.md`: the 15 structure principles (S1–S15), the 7 attitude principles (A1–A7) and the arc in full. Every mode cites these IDs.
 
 Read as needed:
 - `references/tensions.md`: the 10 resolved tensions (T1–T10). Check every design and audit against it.

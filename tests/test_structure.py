@@ -29,7 +29,7 @@ FIELDS = ["**What it says:**", "**Why:**", "**Signals present:**",
 
 def test_principles_have_all_ids_and_fields():
     text = read("references/principles.md")
-    ids = [f"S{i}" for i in range(1, 15)] + [f"A{i}" for i in range(1, 8)]
+    ids = [f"S{i}" for i in range(1, 16)] + [f"A{i}" for i in range(1, 8)]
     for pid in ids:
         assert f"### {pid}. " in text, pid
     for block in text.split("\n### ")[1:]:
@@ -39,7 +39,7 @@ def test_principles_have_all_ids_and_fields():
 
 def test_evidence_levels_are_valid():
     levels = re.findall(r"\*\*Evidence:\*\* (\w+)", read("references/principles.md"))
-    assert len(levels) == 21
+    assert len(levels) == 22
     assert set(levels) <= {"established", "practitioner", "philosophy", "hypothesis"}
 
 
@@ -181,3 +181,16 @@ def test_frontmatter_is_strict_yaml():
     assert meta["name"] == "dojo"
     assert "Dojo lens: on" in meta["description"]
     assert yaml.safe_load(read("agents/openai.yaml"))["interface"]["display_name"] == "Dojo"
+
+
+def test_s15_and_enriched_s14():
+    text = read("references/principles.md")
+    assert "### S15. Progressive overload" in text
+    s15 = text.split("### S15.", 1)[1].split("\n### ", 1)[0]
+    for s in ["deload", "small", "track"]:
+        assert s in s15.lower(), s
+    s14 = text.split("### S14.", 1)[1].split("\n### ", 1)[0]
+    assert "Biederman" in s14 and "feedback" in s14
+    t = read("references/tensions.md")
+    assert t.count("progressive overload") >= 2
+    assert "S1–S15" in read("SKILL.md")

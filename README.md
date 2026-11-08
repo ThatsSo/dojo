@@ -82,7 +82,7 @@ Card CSVs are UTF-8 with two columns (front, back) and no header row, using stan
 ```
 dojo/
   SKILL.md                 thesis, triggers, mode routing
-  references/principles.md the model: arc, S1–S14 structure, A1–A7 attitude
+  references/principles.md the model: arc, S1–S15 structure, A1–A7 attitude
   references/tensions.md   ten apparent conflicts and how they resolve
   references/sources.md    source summaries + evidence corrections
   references/design.md     design workflow + knowledge-type table

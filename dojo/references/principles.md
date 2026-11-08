@@ -1,6 +1,6 @@
 # Dojo principles
 
-Every Dojo mode reads this first. Other files cite principles by ID: S1–S14 for structure, A1–A7 for attitude. The tensions between principles, and how each is resolved, are in `tensions.md`. Source details and corrections are in `sources.md`.
+Every Dojo mode reads this first. Other files cite principles by ID: S1–S15 for structure, A1–A7 for attitude. The tensions between principles, and how each is resolved, are in `tensions.md`. Source details and corrections are in `sources.md`.
 
 ## Thesis
 
@@ -149,11 +149,19 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 
 ### S14. Explicit vs. implicit, by how fast decisions must be made
 **What it says:** Explicit knowledge suits slow, complex decisions (strategy, planning, analysis). Implicit skill suits fast execution, where conscious thought only gets in the way. Most skills need both, so teach each layer its own way. Implicit learning is helped by lots of exposure with feedback, by analogies to skills already mastered, and by *how* things are taught (engaging, familiar framing).
-**Why:** James: the football example (explicit for the play call, implicit once the action starts); "great players make bad coaches"; chicken sexing. Research suggests implicitly learned skills hold up better under pressure, and that consciously monitoring a skilled movement can disrupt it (choking).
-**Signals present:** Strategy or theory content is separate from execution drills. Execution drills have high volume and fast feedback. New skills are introduced through analogies to known ones.
+**Why:** James: the football example (explicit for the play call, implicit once the action starts); "great players make bad coaches". Research suggests implicitly learned skills hold up better under pressure, and that consciously monitoring a skilled movement can disrupt it (choking). Chicken sexing is the classic case. Expert sexers learned by sorting real chicks and getting immediate feedback from a master, not from written rules, and many can't say what they look at. Yet Biederman & Shiffrar (1987) found that one explicit cue pointed out by an expert sharply improved novices. So perceptual skill grows from volume plus feedback, and a few well-chosen cues speed it up (see `sources/chicken-sexing.md`).
+**Signals present:** Strategy or theory content is separate from execution drills. Execution drills have high volume and fast feedback. Perceptual skills are trained as rapid classification ("which is it?") with instant correction, on expert-labelled examples, plus a few explicit cues. New skills are introduced through analogies to known ones.
 **Signals absent:** Execution taught only through verbal rules. Learners told to think through every step at performance speed.
 **Misapplications:** Treating implicit learning as "no explanation ever". One well-chosen explicit cue can speed up perceptual learning dramatically (see `sources.md`).
 **Evidence:** established (choking under conscious monitoring; implicit robustness); practitioner/philosophy ("great players make bad coaches")
+
+### S15. Progressive overload
+**What it says:** Raise the load in small, measured steps: one variable at a time, roughly 5–10% or one rung of a progression ladder per step. Track each step so it's a deliberate decision, not drift. Plan recovery too: after several steps up, or when fatigue or error rates climb, take a lighter "deload" session or week at an easier level before pushing again.
+**Why:** Strength training: muscles adapt to a load and stop improving unless the load keeps rising a little, and they need lighter periods to consolidate (see `sources/progressive-overload.md`). The same shape shows up in learning: Voltaic's tiers, Woodpecker's halving time limits and the goldilocks zone (S8) all raise difficulty gradually. James: when one variable goes up, dial the others back (S10). Coach mode's progression ladders are progressive overload made explicit.
+**Signals present:** Difficulty steps are small and logged. A ladder or tier shows the next step. Easy or recovery sessions are scheduled, not just allowed. Increases happen when the current level holds, not on a timer.
+**Signals absent:** Big jumps in difficulty; difficulty that never changes; no record of what level the learner is at; constant maximum effort with no lighter sessions.
+**Misapplications:** Raising load every session regardless of performance. Treating a deload as failure or lost progress (it's part of the plan; see A7). Using "small steps" as an excuse never to step up.
+**Evidence:** established (in exercise science); practitioner (as an analogy for learning)
 
 ---
 

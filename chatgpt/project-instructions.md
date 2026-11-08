@@ -11,7 +11,7 @@ Learning turns explicit knowledge into implicit skill. Each stage has its own ru
 5. **Review:** recordings, outside eyes, rare benchmarks; back to Map.
 
 ## Knowledge files
-Read **principles.md** before anything else: the structure principles (S1–S14), attitude principles (A1–A7) and the arc. Then load what the task needs:
+Read **principles.md** before anything else: the structure principles (S1–S15), attitude principles (A1–A7) and the arc. Then load what the task needs:
 - **tensions.md**: ten apparent conflicts and how they resolve. Check every design and audit against it.
 - **sources.md**: source summaries and evidence corrections. Read before making research claims.
 - **design.md**: designing a learning app, feature, course or practice system.
