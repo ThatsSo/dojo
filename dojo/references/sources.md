@@ -95,7 +95,7 @@ Sources: Fundamental Routines 2.5, the Benchmarks guide, the Aim Journey guide, 
 
 ## Deeper files
 
-Each source has a longer file in `sources/`. Read them only in deep mode ("explain more") or when a claim needs the detail; this page is the everyday summary.
+Each source has a longer file (listed below). Read them only in deep mode ("explain more") or when a claim needs the detail; this page is the everyday summary.
 
 - `sources/james.md`
 - `sources/ultralearning.md`
