@@ -44,3 +44,14 @@ Installed by junction at `~/.codex/skills/dojo`; run with the desktop app's bund
 | 12 | "I want to get better at mental math. Can you help me learn it?" | **Pass** | Codex loaded `~/.codex/skills/dojo/SKILL.md` itself and coached in Dojo style: asked the goal and one-off vs. ongoing, named the stage ("learning stage: one technique, no timer"), explained why the technique works, and framed mistakes as information. |
 
 Found while preparing: the old unquoted `description:` contained `: ` and wasn't valid strict YAML, which Codex rejects. Now quoted, and `test_frontmatter_is_strict_yaml` guards it.
+
+## Coach upgrades (2026-11-07)
+
+Blind (not told the skill exists), simulated learner answers given in the prompt.
+
+| # | Eval | Result | Notes |
+|---|---|---|---|
+| 13 | "Help me prepare for the CPA AUD exam over the next 8 weeks" (Claude) | **Pass** | Showed `Planning, step N of 4` throughout; researched the AICPA blueprint and secondary sources (7 cited URLs, unconfirmed weights labelled); announced and capped the placement check (8 items, one-line answers, no teaching); wrote `plan.md` with all nine required sections in order (plus a weekly schedule, session formats and a Woodpecker set) and `log.md`; asked for approval before session 1. Flagged honestly that 48 hours is light for AUD and that 4-hour mocks conflict with short sittings. |
+| 14 | Fresh agent, files only: "Start my 25-minute session" (compaction test) | **Pass** | Read Resume here and continued at the saved rung; scaled blocks to 25 min (Settings said 40) with reviews first; status line per block; cleared rung 1, applied the two-miss rule on rung 2 (gave one explicit cue, saved rung 2 to reopen eased); stopped on time; rewrote Resume here, added weak points, updated review intervals (correct ×2, miss → 1 day) and the log. Minor: ran reviews due the next day a day early (said so). |
+| 15 | Ordinary question ("What does an unmodified audit opinion mean?") | **Pass** | Not triggered; plain answer. |
+| — | AUD planning in Codex | **Not run** | James's Codex usage limit was exhausted until 2026-11-10. |
