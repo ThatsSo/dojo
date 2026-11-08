@@ -6,6 +6,7 @@ Writes:
   dojo-skill.zip        the skill folder, for ChatGPT's Skills upload (one top-level `dojo/`)
   chatgpt-project/      instructions.md + knowledge/ files, for a ChatGPT Project or Custom GPT
 """
+import re
 import shutil
 import sys
 import zipfile
@@ -35,7 +36,10 @@ def build(out: Path) -> None:
     (kit / "knowledge").mkdir(parents=True)
     shutil.copy(ROOT / "chatgpt" / "project-instructions.md", kit / "instructions.md")
     for ref in sorted((SKILL / "references").glob("*.md")):
-        shutil.copy(ref, kit / "knowledge" / ref.name)
+        text = ref.read_text(encoding="utf-8")
+        # In the kit, source files are flat and prefixed; fix references to match.
+        text = re.sub(r"`?sources/([a-z0-9-]+\.md)`?", r"`source-\1`", text)
+        (kit / "knowledge" / ref.name).write_text(text, encoding="utf-8", newline="\n")
     # Per-source files, prefixed so sources/woodpecker.md can't overwrite woodpecker.md.
     for src in sorted((SKILL / "references" / "sources").glob("*.md")):
         if not src.name.startswith("_"):

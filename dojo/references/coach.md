@@ -41,7 +41,7 @@ Long conversations get **compacted** (summarized), and new conversations start b
 
 - **Start of every session:** read `plan.md` (Resume here first) and the latest `log.md` entry.
 - **End of every session:** update both, and rewrite Resume here.
-- **Older plan files** (from before these sections existed): add any missing sections, in the template's order, the next time you open the file. Keep everything already there.
+- **Older plan files** (from before these sections existed): add any missing sections, in the template's order, the next time you open the file, and keep everything already there. Two old sections move: fold `## Current habit focus` into Resume here (the "Now" line) and the Progression ladders, then remove it; move `## Schedule (inputs, not outcomes)` into Settings (Sessions per week). Extra sections are fine, but put them after the Settings section so the template order stays intact.
 
 ### Where the files live
 
@@ -53,7 +53,7 @@ Long conversations get **compacted** (summarized), and new conversations start b
 
   If the user wants a different place, offer to write `~/.dojo.json` for them.
 - **Tools with their own file storage (ChatGPT project files, canvas or documents):** keep `plan.md` and `log.md` there and update them in place each session.
-- **Tools that can't store files:** at the end of each session, give the updated `plan.md` as a downloadable file, and a short **state block** the learner pastes into the next conversation. The state block is Resume here, plus the reviews due, plus the current ladder rung for each skill being acquired. Tell the learner plainly that this file and state block are what keep their progress.
+- **Tools that can't store files:** at the end of each session, give the updated `plan.md` as a downloadable file, and a short **state block** the learner pastes into the next conversation. The state block is Resume here, the full Review schedule table, the current rung and remaining rungs for each skill being acquired, the Weak points, and Settings. Tell the learner plainly that this file and state block are what keep their progress. At the start of the next session, ask them to upload the latest plan.md. If they only have the state block, continue from it, mark anything it doesn't cover as unknown until the file arrives, and never invent intervals, rungs or history.
 
 ```
 <subject>/
@@ -109,6 +109,7 @@ Clear a rung with N = <2> correct (<1> for long or worked answers)
 
 ## Settings
 - Session length: 25 minutes
+- Sessions per week: <number, and preferred days or times>
 - Explanation depth: standard
 - Rung clear count: N = 2 (short answers), 1 (long or worked answers)
 ```
@@ -137,7 +138,9 @@ Acquire deliberately keeps adding difficulty, so it can't end on an accuracy str
 
 ## Review schedule (spaced repetition)
 
-Items enter when their skill reaches `automating`. Reviews come at the start of each session, from the Review schedule table.
+When a rung is cleared, add its key item (the fact, rule or judgement the rung tested) to the Review schedule with a 1-day interval, so spacing starts during Acquire rather than weeks later. Weak points enter too. When a skill reaches `automating`, add any remaining key items.
+
+Reviews come at the start of each session, from the Review schedule table. Review only items due on or before today; don't pull future items forward. If nothing is due, give the block's time to ladder work.
 
 - **Correct:** double the interval: 1 → 2 → 4 → 8 → 16 → 32 days, then a **60-day** maintenance cap.
 - **Missed:** back to 1 day, and add (or update) an entry in Weak points.
@@ -147,14 +150,16 @@ Items enter when their skill reaches `automating`. Reviews come at the start of 
 
 Show the session plan up front. The time box is the Settings session length (default **25 minutes**), split into blocks:
 
-1. **Reviews due** (about 5 minutes): from the Review schedule. Update intervals as you go.
+1. **Reviews due** (about 5 minutes): items from the Review schedule that are due on or before today. Update intervals as you go.
 2. **Ladder work** (about 12): the current skill, starting from the saved rung.
 3. **Mixed practice** (about 5): new material mixed with older material and weak points (interleaving, S3).
 4. **Debrief and file update** (about 3): update `log.md`, rewrite Resume here, and update Weak points, Review schedule and ladder status.
 
 Give a one-line check-in at each block boundary. The session **stops on time**, even mid-rung. The rung is saved, and the next session starts there. Leaving a topic unfinished is fine: spacing means you'll come back to it fresh.
 
-**Less time than planned** ("I've only got 10 minutes"): scale the blocks down proportionally, keep reviews first, and always keep a minute for the file update. **No session since a while,** or the learner is tired: offer a lighter deload session at an easier rung (S15). It still counts (A7, T9).
+**Settings are the defaults for every session** (session length, explanation depth, rung clear count). If the learner asks for something different just for today ("25 minutes today", "keep it brief"), use it for this session only. Then ask whether to save it to Settings, and update Settings only if they say yes.
+
+**Less time than planned** ("I've only got 10 minutes"): scale the blocks down proportionally, keep reviews first, and always keep a minute for the file update. **No session for a while,** or the learner is tired: offer a lighter deload session at an easier rung (S15). It still counts (A7, T9).
 
 Check in on the process, not the progress: did practice happen since last time? A missed session is information, never a failure to scold (A3, A7). Run the benchmark when it's due (S11).
 

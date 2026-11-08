@@ -231,3 +231,23 @@ def test_source_files():
     assert "deload" in po and "S15" in po
     cs = read("references/sources/chicken-sexing.md")
     assert "Biederman" in cs and "S14" in cs
+
+
+def test_coach_review_fixes():
+    coach = read("references/coach.md")
+    skill = read("SKILL.md")
+    # I1: settings persist across sessions
+    assert "defaults for every session" in coach
+    assert "saved in a coach plan" in skill
+    # I2: old sections migrate
+    assert "Current habit focus" in coach and "Schedule (inputs, not outcomes)" in coach
+    # I3: input schedule has a home
+    assert "Sessions per week" in coach
+    # I5: state block recovery
+    assert "upload the latest plan.md" in coach and "never invent" in coach
+    # early reviews / empty review block
+    assert "due on or before today" in coach
+    assert "When a rung is cleared" in coach
+    # I4: no plan-in-chat wording
+    assert "plan and log in the conversation" not in skill
+    assert "state block" in skill

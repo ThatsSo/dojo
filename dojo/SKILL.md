@@ -42,7 +42,7 @@ Modes combine. For example, Design often ends with Cards or Woodpecker, and Coac
 Dojo is a standard Agent Skill, so it works in Claude Code, Codex and ChatGPT. Adapt to what the tool can do:
 
 - **Can read and edit the user's files** (Claude Code, Codex): use every mode as written, including saving reports, coach subject folders and running `scripts/`.
-- **Can't reach the user's files** (ChatGPT chat): audit and design from what the user pastes or uploads; ask for the relevant files rather than guessing. Coach mode keeps the plan and log in the conversation or project instead of a folder. Return reports and card decks as downloadable files, or in the reply if downloads aren't available.
+- **Can't reach the user's files** (ChatGPT chat): audit and design from what the user pastes or uploads; ask for the relevant files rather than guessing. Coach mode keeps `plan.md` and `log.md` in the tool's own storage (project files or canvas); otherwise it gives a downloadable `plan.md` plus a state block each session (see `references/coach.md`). Return reports and card decks as downloadable files, or in the reply if downloads aren't available.
 - **Can't run scripts:** write card CSVs directly in the format in `references/cards.md` and check them by hand against its rules (two columns, no header, quoting, the row-1 quirk).
 - **No question tool:** ask approval questions in plain text, one at a time, with your recommendation first.
 - **Invoking it:** `/dojo` in Claude Code, `$dojo` in Codex, `@dojo` in ChatGPT, or just describe the task.
@@ -73,5 +73,5 @@ Dojo is a standard Agent Skill, so it works in Claude Code, Codex and ChatGPT. A
    - **Deep:** when the user says "explain more", "go deeper" or "why?", give a short paragraph per decision, including the source behind it (see `references/sources.md`).
    - **Brief:** when the user says "just do it", "skip the explanations" or "brief", give one clause per decision (concept name plus the reason), never a bare ID.
 
-   The depth lasts for that task; the next task returns to standard unless the user says otherwise.
+   The depth lasts for that task; the next task returns to standard unless the user says otherwise, or a depth is saved in a coach plan's Settings (coach mode uses that as its default).
 9. **Ask before acting on a judgement call.** Findings and design choices are proposals until the user approves them. Ask "Is this a good idea?" about each one that changes behaviour, one decision at a time, with your recommendation first (see the Approval section of `references/audit.md`).

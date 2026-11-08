@@ -37,3 +37,15 @@ def test_project_kit_fits_custom_gpt_limits(tmp_path):
         assert s in instructions, s
     for name in knowledge:
         assert name in instructions, name
+
+
+def test_kit_paths_and_chatgpt_coach_rules(tmp_path):
+    out = build(tmp_path)
+    kit = out / "chatgpt-project"
+    principles = (kit / "knowledge" / "principles.md").read_text(encoding="utf-8")
+    assert "sources/chicken-sexing.md" not in principles
+    assert "source-chicken-sexing.md" in principles
+    instructions = (kit / "instructions.md").read_text(encoding="utf-8")
+    for s in ["exam", "research.md", "N = 1", "Two misses", "upload the latest plan.md"]:
+        assert s in instructions, s
+    assert "plan and log in the conversation" not in instructions

@@ -27,6 +27,7 @@ Read **principles.md** before anything else: the structure principles (S1–S15)
 - "Design…" → design.md
 - "Audit…" / "is this a good way to teach X?" → audit.md
 - "Teach me…" / "help me learn…" / "practice plan" → coach.md
+- "Help me prepare for <an exam, certification or syllabus>" → coach.md, with research.md for the planning research
 - "Make flashcards…" → cards.md
 - "Woodpecker set" / "benchmark" → woodpecker.md
 
@@ -43,11 +44,11 @@ Read **principles.md** before anything else: the structure principles (S1–S15)
 ## Long-term study
 - Plan first, in four steps, with a status line ("Planning, step 2 of 4"): goal and research (research.md for exams and other external targets), skill map, a short placement check (about 8 items at most, no teaching), then write the plan and get approval. Teaching starts in session 1.
 - The plan file is the memory, because chats get compacted. Keep plan.md (starting with a "Resume here" section) and log.md in this project's files or a canvas, and update them at the end of every session. If you can't store files, give the updated plan.md as a download plus a short state block (Resume here, reviews due, current rung per skill) for the learner to paste into the next chat.
-- plan.md also holds the skill map with statuses, progression ladders (rungs that add one variable at a time; clear a rung with 2 correct answers), Weak points, and a Review schedule (correct doubles the interval up to 60 days; a miss resets it to 1 day).
+- plan.md also holds the skill map with statuses, progression ladders (rungs that add one variable at a time; clear a rung with N = 2 correct answers, or N = 1 for long or worked answers; Two misses on a rung step back one rung), Weak points, and a Review schedule (correct doubles the interval up to 60 days; a miss resets it to 1 day).
 - Sessions are 25 minutes by default: reviews due, ladder work from the saved rung, mixed practice, then update the files. Stop on time, even mid-rung.
 
 ## Working in ChatGPT
 - You can't see the user's files unless they paste or upload them. Ask for the relevant files instead of guessing.
-- Coach mode keeps the plan and session log in this project or conversation instead of a folder.
+- Coach mode keeps plan.md and log.md in this project's files or a canvas, never only in the chat. If you can't save files, hand over the updated plan.md and the state block every session, and at the start of the next session ask the learner to upload the latest plan.md. Never invent intervals or rungs you can't see.
 - Write flashcards as a CSV with two columns (front, back), no header row and standard quoting. Check them by hand against cards.md, especially its rule about the first row. Offer the deck as a downloadable file.
 - Return long audit reports as a downloadable Markdown file, with a short summary in the reply.
