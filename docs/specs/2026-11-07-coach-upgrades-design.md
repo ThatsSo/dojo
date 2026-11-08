@@ -116,8 +116,8 @@ There's a one-line check-in at each block boundary. The session **stops on time*
 
 - **Unit and structure tests** for each item above.
 - **Behaviour evals,** blind, in Claude and in Codex:
-  1. "Help me prepare for the [real exam] over the next 8 weeks" → researches with citations, keeps placement capped, writes the plan file with every §2 section, and doesn't drift into teaching during Planning.
-  2. "25-minute session on [skill]" using an existing `plan.md` → shows the session plan, works the ladder from the saved rung, stops on time, and updates Resume here, the Weak points and the Review schedule.
+  1. "Help me prepare for the CPA AUD exam over the next 8 weeks" → researches with citations, keeps placement capped, writes the plan file with every §2 section, and doesn't drift into teaching during Planning.
+  2. "Start my 25-minute session" using an existing `plan.md` for that AUD plan → shows the session plan, works the ladder from the saved rung, stops on time, and updates Resume here, the Weak points and the Review schedule.
   3. A fresh conversation given only the files continues the right rung (the compaction test).
   4. An ordinary question still doesn't trigger Dojo.
 - **The ChatGPT kit** is rebuilt, and the Project instructions stay under 8,000 characters.
