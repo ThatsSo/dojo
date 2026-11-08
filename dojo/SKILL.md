@@ -17,9 +17,11 @@ A pedagogy skill. **Thesis: a rigorous plan, done with a Zen attitude.** Modern 
 
 ## Always read first
 
-`references/principles.md`: the 15 structure principles (S1–S15), the 7 attitude principles (A1–A7) and the arc in full. Every mode cites these IDs.
+`references/rules.md`: the binding rules. It gives every principle (S1–S17 structure, A1–A8 attitude) as a one-line rule with its concept, plus the operational rules merged from all the sources. Every mode cites these IDs.
 
 Read as needed:
+- `references/principles.md`: the 17 structure principles (S1–S17), the 8 attitude principles (A1–A8) and the arc in full, with the why, signals, misapplications and evidence level for each. Open the relevant entries when explaining a decision (hard rule 8) or when a call is unclear.
+- `references/pitfalls.md`: the merged list of what goes wrong, with symptoms. Use it in every audit and lens check, and when a learner stalls.
 - `references/tensions.md`: the 10 resolved tensions (T1–T10). Check every design and audit against it.
 - `references/sources.md`: source summaries and evidence corrections. Read before making claims about research.
 
@@ -54,7 +56,7 @@ Dojo is a standard Agent Skill, so it works in Claude Code, Codex and ChatGPT. A
 3. **Respect recorded decisions.** Read the project's decision records (HANDOFF.md, DECISIONS.md, CLAUDE.md, specs) first. If the pedagogy conflicts with a recorded user decision, name the tension **once**, give the trade-off, and move on. Never argue it again.
 4. **Say which stage of the arc you're addressing.** Most bad advice comes from applying one stage's rules to another (stopping on every mistake during Perform; analysing mid-flow).
 5. **Tag claims with their evidence level** (established, practitioner, philosophy, hypothesis) when it matters. Don't present hypotheses or heuristics as settled science (see `references/sources.md`).
-6. **Keep the attitude in the product, not just the plan.** Neutral feedback, process-first metrics, goals the learner owns, no guilt mechanics (A1–A7).
+6. **Keep the attitude in the product, not just the plan.** Neutral feedback, process-first metrics, goals the learner owns, no guilt mechanics (A1–A8).
 7. **Write for whoever reads it next.** Design notes and audits go in the project's own doc style; long audits are saved as files (see `audit.md`).
 8. **Show the reasoning.** Never just *do* the pedagogy; say why. Write each decision as:
    - the **decision**;

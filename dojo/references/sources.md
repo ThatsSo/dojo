@@ -107,7 +107,7 @@ Each source has a longer file (listed below). Read them only in deep mode ("expl
 - `sources/progressive-overload.md`
 - `sources/chicken-sexing.md`
 
-Files marked "seed" still hold only the summary above; they're being expanded from James's write-ups.
+Every file except `sources/james.md` now holds James's full write-up for that source (formatting tidied, content unchanged). The binding rules drawn from them are in `rules.md`, and their pitfalls are merged in `pitfalls.md`.
 
 ## Evidence corrections
 

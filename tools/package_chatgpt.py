@@ -38,12 +38,17 @@ def build(out: Path) -> None:
     for ref in sorted((SKILL / "references").glob("*.md")):
         text = ref.read_text(encoding="utf-8")
         # In the kit, source files are flat and prefixed; fix references to match.
-        text = re.sub(r"`?sources/([a-z0-9-]+\.md)`?", r"`source-\1`", text)
+        text = re.sub(r"`?sources/([a-z0-9-]+)\.md`?", r"`source-files.md` (\1 section)", text)
+        text = text.replace("`sources/`", "`source-files.md`")
         (kit / "knowledge" / ref.name).write_text(text, encoding="utf-8", newline="\n")
-    # Per-source files, prefixed so sources/woodpecker.md can't overwrite woodpecker.md.
+    # All per-source files in one knowledge file, to stay well under ChatGPT's file limit.
+    parts = ["# Source files\n\nOne section per source; the heading names the section.\n"]
     for src in sorted((SKILL / "references" / "sources").glob("*.md")):
         if not src.name.startswith("_"):
-            shutil.copy(src, kit / "knowledge" / ("source-" + src.name))
+            body = src.read_text(encoding="utf-8")
+            body = "\n".join("#" + l if l.startswith("#") else l for l in body.splitlines())
+            parts.append(f"\n<!-- {src.stem} -->\n" + body)
+    (kit / "knowledge" / "source-files.md").write_text("\n".join(parts), encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

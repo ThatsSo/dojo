@@ -18,6 +18,8 @@ Only to **learner-facing** work: anything that changes what the learner practise
 
 ## The six questions
 
+If a change matches a symptom in `pitfalls.md`, name that pitfall in the lens note.
+
 Before finishing a learner-facing change, ask:
 
 1. **Which arc stage does this serve** (Map, Acquire, Automate, Perform, Review), and does it follow that stage's rules? (Arc, T2)

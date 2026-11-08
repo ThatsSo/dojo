@@ -13,7 +13,7 @@ Before judging anything, write down **what the app is for**: the learner, the sk
 Read HANDOFF.md, DECISIONS.md, CLAUDE.md, specs and code comments that explain choices. A recorded user decision is a constraint. A finding that contradicts one goes in **Tensions with recorded decisions**, stated once with the trade-off, and is never argued again.
 
 ### 3. Rate each relevant principle
-For each of S1–S15 and A1–A7 that applies, give one rating:
+For each of S1–S17 and A1–A8 that applies, give one rating:
 
 - **Strong:** the app embodies it well. Say so and say where.
 - **Partial:** present but incomplete or inconsistent.
@@ -21,7 +21,7 @@ For each of S1–S15 and A1–A7 that applies, give one rating:
 - **Conflicts:** the app works *against* it.
 - **N/A:** doesn't apply to this goal. Say why in a few words.
 
-Each rating needs **evidence as `file:line`** (or a UI path), plus the reasoning tied to the goal from step 1. Also check the relevant rows of `tensions.md`; a design that takes one side of a tension for the wrong arc stage is a finding.
+Each rating needs **evidence as `file:line`** (or a UI path), plus the reasoning tied to the goal from step 1. Then scan `references/pitfalls.md` row by row: its "What you see" column is a symptom checklist, and each pitfall you find is a finding. Also check the relevant rows of `tensions.md`; a design that takes one side of a tension for the wrong arc stage is a finding.
 
 ### 4. Credit what works
 List **Strengths** first, and mean them. Audits that only list gaps get ignored, and strengths show what to build on.

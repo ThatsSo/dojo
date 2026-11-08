@@ -1,6 +1,6 @@
 # Dojo principles
 
-Every Dojo mode reads this first. Other files cite principles by ID: S1–S15 for structure, A1–A7 for attitude. The tensions between principles, and how each is resolved, are in `tensions.md`. Source details and corrections are in `sources.md`.
+Every Dojo mode reads this first. Other files cite principles by ID: S1–S17 for structure, A1–A8 for attitude. The tensions between principles, and how each is resolved, are in `tensions.md`. Source details and corrections are in `sources.md`.
 
 ## Thesis
 
@@ -163,6 +163,22 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 **Misapplications:** Raising load every session regardless of performance. Treating a deload as failure or lost progress (it's part of the plan; see A7). Using "small steps" as an excuse never to step up.
 **Evidence:** established (in exercise science); practitioner (as an analogy for learning)
 
+### S16. Models and worked examples
+**What it says:** Learn from people and examples that already show the skill: watch and imitate a skilled performer, study worked examples, and practise on representative, expert-labelled cases. Use a model to *show* what explanation can't (S14). Then fade the support: first a full example, then a partial one, then independent work (S15).
+**Why:** *Zen in the Art of Archery*: much of the teaching was demonstration, then imitation, with understanding following later. Chicken sexing: skill grew from many expert-labelled examples. Progressive overload's scaffolding (worked example → partial example → independent). *Ultralearning*: copy first, then create. Research on the worked-example effect: novices learn faster from studying solved problems than from solving unaided.
+**Signals present:** Demonstrations, reference recordings, worked solutions, annotated examples. Examples cover the real range of cases. A visible path from "follow the example" to "do it alone".
+**Signals absent:** Only instructions and rules, never a demonstration. Learners solve from scratch on day one. Examples that are all alike, or unrealistic.
+**Misapplications:** Copying forever without fading the support. Imitating style without the reason behind it. Examples so uniform that the learner memorizes them instead of the pattern (S12).
+**Evidence:** established (worked-example effect, observational learning); practitioner (master-apprentice imitation)
+
+### S17. Adapt the method to the evidence
+**What it says:** The plan is a hypothesis. Watch whether the method is working (progress, errors, transfer, engagement), and change *how* you practise when results stall, rather than pushing harder on a method that isn't working. Experiment deliberately: try a variation, compare, and keep what works. Treat specific protocols (cycle counts, intervals, routines) as starting points, not laws, and combine methods where one alone leaves gaps.
+**Why:** *Ultralearning*: experimentation and adaptive execution (revise methods by results). Woodpecker: its exact schedule is not well proven, so supplement it with other methods. Voltaic: a plateau means checking fundamentals and training design before adding volume. Progressive overload: assess → adjust as a continuous loop.
+**Signals present:** Periodic reviews of what's working. Methods change when a plateau persists. Alternatives are tried and compared. Protocols are labelled with their evidence level.
+**Signals absent:** The same routine for months despite no progress. "The method says so" as the only reason. Every stall answered with more volume.
+**Misapplications:** Changing method every week, before any method has had time to work. Abandoning sound fundamentals for novelty. Using "experiment" to dodge the uncomfortable weakness (S3).
+**Evidence:** practitioner
+
 ---
 
 ## Attitude principles
@@ -224,4 +240,12 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 **Signals present:** Long-horizon views of progress that absorb bad days. Low-energy session options ("easy day") that still count.
 **Signals absent:** Every session framed as pass or fail. Bad days shown as lost progress.
 **Misapplications:** Using "direction" to excuse never checking whether the direction is right (S11 and the Review stage).
+**Evidence:** philosophy
+
+### A8. Purpose and integration
+**What it says:** Connect what's being learned to something bigger: other skills and knowledge the learner already has, and a purpose they've chosen. Skills learned in isolation stay fragile and are easy to abandon. Skills tied into a life theme reinforce each other, and practising them becomes worth doing for its own sake. Mastery shapes the person too: patience, composure and humility are part of the result.
+**Why:** *Flow*: growing complexity by differentiating (building distinct skills) and integrating (connecting them); a life theme that unifies activities; autotelic, self-chosen goals. *Zen in the Art of Archery*: the art as a path that transforms the practitioner, not just a technique. James: practise for who you want to become ("choose actions that are aligned with who you want to be").
+**Signals present:** New material is linked to what the learner already knows and to their stated purpose. The plan says why each skill matters to the goal. Reflection prompts connect practice to the wider life theme.
+**Signals absent:** Skills taught as isolated tricks. No stated purpose. Metrics that make the activity feel like a chore done for points.
+**Misapplications:** Lecturing about meaning instead of practising. Forcing every drill to feel profound. Using a grand purpose to justify skipping the fundamentals.
 **Evidence:** philosophy

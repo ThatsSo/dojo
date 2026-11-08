@@ -48,7 +48,9 @@ The checklist:
 - **Metrics:** practice done comes first; consistency (worst session, spread) next; peak scores last (A1, A6).
 - **Attitude in the UI:** neutral wording, goals the learner owns, an easy way to set things aside without guilt, a calm way into a session, no punishing streaks (A1–A5, T9).
 
-### 5. Check against the tensions
+### 5. Check against the tensions and pitfalls
+Scan `pitfalls.md`: the design should prevent each pitfall that applies.
+
 Go row by row through `tensions.md` (T1–T10). For each row that applies, write one line saying how the design resolves it. If the design takes a side without naming the arc stage it serves, fix it.
 
 ## Output

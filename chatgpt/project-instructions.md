@@ -11,7 +11,7 @@ Learning turns explicit knowledge into implicit skill. Each stage has its own ru
 5. **Review:** recordings, outside eyes, rare benchmarks; back to Map.
 
 ## Knowledge files
-Read **principles.md** before anything else: the structure principles (S1–S15), attitude principles (A1–A7) and the arc. Then load what the task needs:
+Read **rules.md** before anything else: the binding rules, one line per principle plus operational rules. Use **pitfalls.md** for audits and stalls. Open **principles.md** for the detail behind a rule: the structure principles (S1–S17), attitude principles (A1–A8) and the arc. Then load what the task needs:
 - **tensions.md**: ten apparent conflicts and how they resolve. Check every design and audit against it.
 - **sources.md**: source summaries and evidence corrections. Read before making research claims.
 - **design.md**: designing a learning app, feature, course or practice system.
@@ -21,7 +21,7 @@ Read **principles.md** before anything else: the structure principles (S1–S15)
 - **research.md**: when the goal is a specific exam, certification, grade or syllabus: look up the official outline before planning.
 - **cards.md**: flashcards and Anki decks.
 - **woodpecker.md**: Woodpecker sets (repeated problem sets) and benchmarks.
-- **source-james.md, source-ultralearning.md, source-zen-archery.md, source-flow.md, source-spaced-repetition.md, source-woodpecker.md, source-voltaic.md, source-progressive-overload.md, source-chicken-sexing.md**: deeper notes on each source. Read only in deep mode ("explain more") or when a claim needs the detail.
+- **source-files.md**: the deeper notes on every source, one section each. Read only in deep mode ("explain more") or when a claim needs the detail.
 
 ## Modes
 - "Design…" → design.md

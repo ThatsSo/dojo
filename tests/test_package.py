@@ -30,7 +30,8 @@ def test_project_kit_fits_custom_gpt_limits(tmp_path):
     knowledge = sorted(p.name for p in (kit / "knowledge").iterdir())
     assert "principles.md" in knowledge and "audit.md" in knowledge
     assert "research.md" in knowledge
-    assert "source-chicken-sexing.md" in knowledge and "source-woodpecker.md" in knowledge
+    assert "source-files.md" in knowledge and "rules.md" in knowledge and "pitfalls.md" in knowledge
+    assert not any(n.startswith("source-") and n != "source-files.md" for n in knowledge)
     assert "woodpecker.md" in knowledge  # no collision with the source file
     assert len(knowledge) <= 20
     for s in ["plan.md", "Resume here", "state block", "25 minutes"]:
@@ -44,7 +45,7 @@ def test_kit_paths_and_chatgpt_coach_rules(tmp_path):
     kit = out / "chatgpt-project"
     principles = (kit / "knowledge" / "principles.md").read_text(encoding="utf-8")
     assert "sources/chicken-sexing.md" not in principles
-    assert "source-chicken-sexing.md" in principles
+    assert "source-files.md" in principles
     instructions = (kit / "instructions.md").read_text(encoding="utf-8")
     for s in ["exam", "research.md", "N = 1", "Two misses", "upload the latest plan.md"]:
         assert s in instructions, s

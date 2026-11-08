@@ -7,6 +7,7 @@ SKILL_DIR = Path(__file__).resolve().parent.parent / "dojo"
 REQUIRED_REFERENCES = [
     "principles.md", "tensions.md", "sources.md", "design.md", "audit.md",
     "lens.md", "coach.md", "cards.md", "woodpecker.md", "research.md",
+    "rules.md", "pitfalls.md",
 ]
 
 
@@ -29,7 +30,7 @@ FIELDS = ["**What it says:**", "**Why:**", "**Signals present:**",
 
 def test_principles_have_all_ids_and_fields():
     text = read("references/principles.md")
-    ids = [f"S{i}" for i in range(1, 16)] + [f"A{i}" for i in range(1, 8)]
+    ids = [f"S{i}" for i in range(1, 18)] + [f"A{i}" for i in range(1, 9)]
     for pid in ids:
         assert f"### {pid}. " in text, pid
     for block in text.split("\n### ")[1:]:
@@ -39,7 +40,7 @@ def test_principles_have_all_ids_and_fields():
 
 def test_evidence_levels_are_valid():
     levels = re.findall(r"\*\*Evidence:\*\* (\w+)", read("references/principles.md"))
-    assert len(levels) == 22
+    assert len(levels) == 25
     assert set(levels) <= {"established", "practitioner", "philosophy", "hypothesis"}
 
 
@@ -203,7 +204,7 @@ def test_s15_and_enriched_s14():
     assert "Biederman" in s14 and "feedback" in s14
     t = read("references/tensions.md")
     assert t.count("progressive overload") >= 2
-    assert "S1–S15" in read("SKILL.md")
+    assert "S1–S17" in read("SKILL.md")
 
 
 def test_research_reference():
@@ -216,8 +217,7 @@ def test_research_reference():
 
 SOURCE_FILES = ["james", "ultralearning", "zen-archery", "flow", "spaced-repetition",
                 "woodpecker", "voltaic", "progressive-overload", "chicken-sexing"]
-SOURCE_HEADINGS = ["## Core idea", "## Key techniques", "## Examples",
-                   "## Fit with James's synthesis", "## Principles supported", "## Caveats"]
+SOURCE_HEADINGS = ["Status:", "## Principles supported", "## Caveats"]
 
 
 def test_source_files():
@@ -251,3 +251,48 @@ def test_coach_review_fixes():
     # I4: no plan-in-chat wording
     assert "plan and log in the conversation" not in skill
     assert "state block" in skill
+
+
+def test_new_principles():
+    text = read("references/principles.md")
+    for h in ["### S16. Models and worked examples", "### S17. Adapt the method to the evidence",
+              "### A8. Purpose and integration"]:
+        assert h in text, h
+
+
+def test_rules_surface_layer():
+    rules = read("references/rules.md")
+    ids = [f"S{i}" for i in range(1, 18)] + [f"A{i}" for i in range(1, 9)]
+    for pid in ids:
+        assert f"**{pid} " in rules, pid
+    assert "principles.md" in rules and "pitfalls.md" in rules
+    assert len(rules) < len(read("references/principles.md"))
+    # operational rules merged from the write-ups sit under their principles
+    for s in ["unfamiliar", "scaffold", "baseline", "deload", "ritual", "gamif",
+              "recognition", "periodiz"]:
+        assert s in rules.lower(), s
+    skill = read("SKILL.md")
+    assert skill.index("references/rules.md") < skill.index("references/principles.md")
+
+
+def test_pitfalls_merged_table():
+    text = read("references/pitfalls.md")
+    assert "| Pitfall | What you see | Correction | Stage | Principles | Sources |" in text
+    rows = [l for l in text.splitlines() if l.startswith("| ") and not l.startswith("| Pitfall")
+            and not l.startswith("|---")]
+    assert len(rows) >= 25
+    names = [r.split("|")[1].strip() for r in rows]
+    assert len(names) == len(set(names))
+    for r in rows:
+        assert re.search(r"\b[SA]\d+\b", r), r
+    assert "references/pitfalls.md" in read("references/audit.md")
+    assert "pitfalls.md" in read("references/lens.md")
+
+
+def test_source_files_hold_writeups():
+    for name in [n for n in SOURCE_FILES if n != "james"]:
+        text = read(f"references/sources/{name}.md")
+        assert "from James's write-up" in text, name
+        assert text.count("\n# ") == 0, name  # one top-level title only
+    sr = read("references/sources/spaced-repetition.md")
+    assert "## Part 1" in sr and "### 1. The forgetting curve" in sr
