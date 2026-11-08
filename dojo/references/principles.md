@@ -153,7 +153,7 @@ This is the idea that ties the rest together. Learning moves a skill from consci
 **Signals present:** Strategy or theory content is separate from execution drills. Execution drills have high volume and fast feedback. Perceptual skills are trained as rapid classification ("which is it?") with instant correction, on expert-labelled examples, plus a few explicit cues. New skills are introduced through analogies to known ones.
 **Signals absent:** Execution taught only through verbal rules. Learners told to think through every step at performance speed.
 **Misapplications:** Treating implicit learning as "no explanation ever". One well-chosen explicit cue can speed up perceptual learning dramatically (see `sources.md`).
-**Evidence:** established (choking under conscious monitoring; implicit robustness); practitioner/philosophy ("great players make bad coaches")
+**Evidence:** established (choking under conscious monitoring; implicit robustness; perceptual learning from feedback); hypothesis-strength support for the size of the explicit-cue speed-up (Biederman & Shiffrar 1987, one small study); practitioner/philosophy ("great players make bad coaches")
 
 ### S15. Progressive overload
 **What it says:** Raise the load in small, measured steps: one variable at a time, roughly 5–10% or one rung of a progression ladder per step. Track each step so it's a deliberate decision, not drift. Plan recovery too: after several steps up, or when fatigue or error rates climb, take a lighter "deload" session or week at an easier level before pushing again.

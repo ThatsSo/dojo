@@ -323,3 +323,29 @@ def test_restructure_review_fixes():
               "ultralearning": "# Ultralearning (Scott H. Young)\n", "zen-archery": "# Zen in the Art of Archery (Eugen Herrigel)\n"}
     for name, title in titles.items():
         assert read(f"references/sources/{name}.md").startswith(title), name
+
+
+def section(text, start, stop):
+    return text.split(start, 1)[1].split(stop, 1)[0]
+
+
+def test_minor_fixes():
+    rules = read("references/rules.md")
+    a2 = section(rules, "**A2 ", "**A3 ")
+    a5 = section(rules, "**A5 ", "**A6 ")
+    assert "session's objective" not in a2 and "session's objective" in a5
+    s3 = section(rules, "**S3 ", "**S4 ")
+    s8 = section(rules, "**S8 ", "**S9 ")
+    assert "preparation to demanding" not in s3 and "preparation to demanding" in s8
+    flow = read("references/sources/flow.md")
+    assert "S2: active engagement" in flow and "S4: active engagement" not in flow
+    wp = read("references/woodpecker.md")
+    assert "results in `log.md`" not in wp and "results in the same section" in wp
+    skill = read("SKILL.md")
+    assert "planning phase" in skill
+    assert "Research** (a Planning step inside Coach or Design) | `references/coach.md` + `references/research.md`" in skill
+    coach = read("references/coach.md")
+    assert "an external target (see \"When to research\" in `research.md`" in coach
+    p = read("references/principles.md")
+    s14 = section(p, "### S14.", "### S15.")
+    assert "Biederman" in s14.split("**Evidence:**", 1)[1]

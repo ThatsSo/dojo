@@ -75,7 +75,7 @@ Benchmarks measure; they don't train (**S11**, T10).
 - **Progression:** passing a level's benchmark is what unlocks the next level's practice (S13), not time spent.
 - **A plateau** across several benchmarks suggests a fundamentals problem (setup, technique, difficulty too high), not too little effort.
 
-### Benchmark file (coach mode: inside `plan.md` under `## Benchmark`, results in `log.md`)
+### Benchmark file (coach mode: inside `plan.md` under `## Benchmark`, results in the same section; `log.md` just notes that the benchmark ran)
 
 ```markdown
 | Date | Category | Runs | Average | Worst | Spread | Note |

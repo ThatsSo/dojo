@@ -25,7 +25,7 @@ Same time box as long-running sessions: **25 minutes** by default, or whatever t
 
 Long-running coaching has two phases: **Planning** (once) and **Sessions** (repeated). Always show where you are with a status line at the top of each reply, for example `Planning, step 2 of 4: skill map` or `Session 5 · block 2 of 4: ladder work`.
 
-**Planning, step 1 of 4: goal and research.** Pin down what "done" looks like in the real context, any deadline or exam date, the time available per week, and why they want it. If the goal names an external target (an exam, certification, grade, syllabus or standard), research it now, following `research.md`. Look up the real outline instead of guessing at what the questions might be.
+**Planning, step 1 of 4: goal and research.** Pin down what "done" looks like in the real context, any deadline or exam date, the time available per week, and why they want it. If the goal names an external target (see "When to research" in `research.md`: exams, certifications, grades, courses, syllabi, published standards), research it now, following `research.md`. Look up the real outline instead of guessing at what the questions might be.
 
 **Planning, step 2 of 4: skill map.** Build it from the research, or from the goal when there's no external target: categories and subcategories (S1), each with a status and a progression ladder.
 

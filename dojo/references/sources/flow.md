@@ -4,7 +4,7 @@
 
 ## Principles supported
 
-- S4: active engagement over passive consumption
+- S2: active engagement over passive consumption
 - S6: immediate feedback
 - S8: the flow channel (challenge matched to skill)
 - A1: autotelic, intrinsic motivation

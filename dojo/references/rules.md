@@ -26,7 +26,6 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 **S3 All-round practice, plus the bottleneck.** Cover every category at the learner's level, then add short targeted work on the weakest part and fold it back in.
 - Keep balanced fundamentals; add specialized drills only once the foundation exists. *(Voltaic)*
 - Use broad routines for general growth and focused sessions for specific deficits; rotating one focus per session is a valid alternative. *(Voltaic)*
-- Order a session from preparation to demanding work. *(Voltaic)*
 - Isolate persistently failed items and work on them separately. *(Woodpecker, chicken sexing)*
 - Interleave topics in review so the learner has to identify what each item is asking. *(spaced repetition)*
 
@@ -56,6 +55,7 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 - Lower difficulty when overwhelmed; raise it when bored. *(Flow)*
 - Use productive overload, not underload or excessive overload; individualize to actual results. *(progressive overload)*
 - Reassess as yesterday's hard task becomes routine. *(progressive overload)*
+- Order a session from preparation to demanding work. *(Voltaic)*
 
 **S9 Accuracy first, then speed.** Speed rises only while accuracy holds, because repeated errors become habits.
 - Build reliable judgments before demanding fast ones. *(chicken sexing, Woodpecker, progressive overload)*
@@ -115,7 +115,6 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 
 **A2 Discipline over motivation.** Build systems and small default actions that survive moods.
 - Gamify repetition: goals, records, constraints and challenges inside routine practice. *(Flow)*
-- Define each session's objective before starting. *(Flow)*
 
 **A3 Observe, don't judge.** Feedback is information; in the learning zone fix mistakes, and in the performance zone notice and log them.
 - Separate learning (analyze mechanics) from performance (let execution run). *(Voltaic)*
@@ -129,6 +128,7 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 
 **A5 Focus plus relaxation.** Peak performance is relaxed, complete focus; set up the conditions for flow, but never force it.
 - Design flow conditions: clear goals, immediate feedback, and challenge balanced to skill. *(Flow)*
+- Define each session's objective before starting. *(Flow)*
 - Protect attention: remove distractions. *(Flow, Ultralearning)*
 - Reduce unnecessary tension and force; use breathing. *(Zen in the Art of Archery, Voltaic)*
 - Use a short ritual to arrive present, so repetitions are mindful rather than mindless. *(Zen in the Art of Archery)*
