@@ -1,6 +1,6 @@
 # Dojo principles
 
-Every Dojo mode reads this first. Other files cite principles by ID: S1–S17 for structure, A1–A8 for attitude. The tensions between principles, and how each is resolved, are in `tensions.md`. Source details and corrections are in `sources.md`.
+The detail behind `rules.md`: open the entries you need (deep mode, explaining a decision, or an unclear call) rather than reading it all. Other files cite principles by ID: S1–S17 for structure, A1–A8 for attitude. The tensions between principles, and how each is resolved, are in `tensions.md`. Source details and corrections are in `sources.md`.
 
 ## Thesis
 

@@ -1,6 +1,6 @@
 # Design mode
 
-Use this to shape a new learning app, feature, course or practice system, or to plan an upgrade. Read `principles.md` first.
+Use this to shape a new learning app, feature, course or practice system, or to plan an upgrade. Read `rules.md` first; open `principles.md` entries only when you need the detail behind a rule.
 
 ## Before designing
 

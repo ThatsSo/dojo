@@ -296,3 +296,30 @@ def test_source_files_hold_writeups():
         assert text.count("\n# ") == 0, name  # one top-level title only
     sr = read("references/sources/spaced-repetition.md")
     assert "## Part 1" in sr and "### 1. The forgetting curve" in sr
+
+
+def test_restructure_review_fixes():
+    refs = SKILL_DIR / "references"
+    for f in refs.glob("*.md"):
+        assert "Read `principles.md` first" not in f.read_text(encoding="utf-8"), f.name
+    assert "Every Dojo mode reads this first" not in read("references/principles.md")
+    skill = read("SKILL.md")
+    assert "standard depth" in skill and "rules.md` line is enough" in skill
+    pit = read("references/pitfalls.md")
+    for s in ["Review debt", "Lenient grading", "Leech", "spaced repetition"]:
+        assert s in pit, s
+    rules = read("references/rules.md").lower()
+    for s in ["new cards per day", "target retention", "internal engagement",
+              "observe, diagnose, target", "clear goals, immediate feedback", "time and errors"]:
+        assert s in rules, s
+    sr = read("references/sources/spaced-repetition.md")
+    assert "## Common pitfalls" in sr and "| Pitfall | Why it happens | Fix |" in sr
+    assert "- One fact per card." in sr
+    for name in SOURCE_FILES:
+        text = read(f"references/sources/{name}.md")
+        assert "writeups/" not in text, name
+    assert "S1–S15" not in read("references/sources/_template.md")
+    titles = {"flow": "# Flow (Mihaly Csikszentmihalyi)\n", "woodpecker": "# The Woodpecker Method (Smith and Tikkanen)\n",
+              "ultralearning": "# Ultralearning (Scott H. Young)\n", "zen-archery": "# Zen in the Art of Archery (Eugen Herrigel)\n"}
+    for name, title in titles.items():
+        assert read(f"references/sources/{name}.md").startswith(title), name

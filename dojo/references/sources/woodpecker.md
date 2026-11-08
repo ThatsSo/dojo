@@ -1,4 +1,4 @@
-# The Woodpecker Method (Axel Smith & Hans Tikkanen, 2018)
+# The Woodpecker Method (Smith and Tikkanen)
 
 > Status: from James's write-up (2026-11), formatting tidied by Claude; content unchanged. The binding rules are in `rules.md` and the pitfalls in `pitfalls.md`; this file is the evidence and detail behind them.
 

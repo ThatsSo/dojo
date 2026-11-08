@@ -1,4 +1,4 @@
-# Flow (Mihaly Csikszentmihalyi, 1990)
+# Flow (Mihaly Csikszentmihalyi)
 
 > Status: from James's write-up (2026-11), formatting tidied by Claude; content unchanged. The binding rules are in `rules.md` and the pitfalls in `pitfalls.md`; this file is the evidence and detail behind them.
 

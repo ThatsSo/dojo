@@ -1,6 +1,6 @@
 # Pitfalls
 
-The one merged list of what goes wrong. It combines the pitfall tables from the source write-ups (chicken sexing, progressive overload, Voltaic, Woodpecker) with the misapplications in `principles.md`, deduplicated.
+The one merged list of what goes wrong. It combines the pitfall tables from the source write-ups (chicken sexing, progressive overload, Voltaic, Woodpecker, spaced repetition) with the misapplications in `principles.md`, deduplicated.
 - **Audits and lens checks:** scan the "What you see" column against the app or plan.
 - **Coaching:** check a stalled plan against it before adding effort.
 - **Columns:** "Stage" is the arc stage where the pitfall usually appears; "Principles" points to the rule that corrects it (see `rules.md`).
@@ -39,4 +39,7 @@ The one merged list of what goes wrong. It combines the pitfall tables from the 
 | Judging mid-task | Scolding or self-praise during practice; red-X and buzzer feedback; streaks that punish | Observe, don't judge; evaluate afterwards; process-first metrics | Any | A1, A3 | Zen in the Art of Archery, Flow, James |
 | Treating a method as proven | Following a protocol rigidly though it isn't working; overstating its evidence | Treat the protocol as an experiment; adapt it to results | Review | S17 | Woodpecker, Ultralearning |
 | Leaking attention | Notifications, multitasking, a cluttered session start | Protect attention; use a short ritual to arrive present | Any | A5 | Flow, Ultralearning, Zen in the Art of Archery |
+| Review debt | Hundreds of reviews due; days skipped; reviews feel like a chore | Cap new cards per day; never skip reviews; mute or pause rather than abandon | Automate | S7, A4 | Spaced repetition |
+| Lenient grading | "Good" pressed on half-remembered items; intervals grow on knowledge that isn't there | Grade strictly; "Again" is information, not failure | Automate | S6, A3 | Spaced repetition |
+| Leech and ease-hell cards | The same card fails again and again; intervals shrink and never recover | Rewrite, split or delete leeches; use a scheduler that recovers (e.g. FSRS) | Automate | S7, S17 | Spaced repetition |
 | Isolated skills | Skills taught as unconnected tricks; no stated purpose; practice feels like a chore | Link new material to known material and to the learner's purpose | Map | A8 | Flow, Zen in the Art of Archery |

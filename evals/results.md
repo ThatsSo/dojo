@@ -55,3 +55,11 @@ Blind (not told the skill exists), simulated learner answers given in the prompt
 | 14 | Fresh agent, files only: "Start my 25-minute session" (compaction test) | **Pass** | Read Resume here and continued at the saved rung; scaled blocks to 25 min (Settings said 40) with reviews first; status line per block; cleared rung 1, applied the two-miss rule on rung 2 (gave one explicit cue, saved rung 2 to reopen eased); stopped on time; rewrote Resume here, added weak points, updated review intervals (correct ×2, miss → 1 day) and the log. Minor: ran reviews due the next day a day early (said so). |
 | 15 | Ordinary question ("What does an unmodified audit opinion mean?") | **Pass** | Not triggered; plain answer. |
 | — | AUD planning in Codex | **Not run** | James's Codex usage limit was exhausted until 2026-11-10. |
+
+## Rules / pitfalls restructure (2026-11-07)
+
+| # | Eval | Result | Notes |
+|---|---|---|---|
+| 16 | "Dojo audit" of the vocab page, after adding `rules.md` and `pitfalls.md` | **Pass** | Files read: `SKILL.md` → `rules.md` → `audit.md` → `pitfalls.md` → `tensions.md` (not `principles.md` or any source file), so everyday context is lighter. 12 plain-words Concept lines; named the pitfalls found; asked the goal question before any fix; page unchanged. |
+
+Final review (fresh reviewer): one Critical. `audit.md`, `design.md` and `coach.md` still said "Read `principles.md` first", which would have cancelled the saving; fixed, and guarded by a test. Also fixed: the spaced-repetition pitfalls (review debt, lenient grading, leeches/ease hell) merged; five missed operational rules added; James's original titles restored; spaced-repetition Part 3 and pitfalls table formatted; stale references removed.

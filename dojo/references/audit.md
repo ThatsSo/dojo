@@ -1,6 +1,6 @@
 # Audit mode
 
-Use this to judge or upgrade an existing learning app, feature or file. Read `principles.md` first.
+Use this to judge or upgrade an existing learning app, feature or file. Read `rules.md` first; open `principles.md` entries only when you need the detail behind a rule.
 
 **The core rule: judge methods conceptually, against the learner's goal.** Ask whether the method is sound for what the learner is trying to do, given how learning works. Don't ask whether it copies SM-2, Woodpecker or Voltaic. A homemade scheduler can be excellent; a textbook one can be wrong for the goal.
 

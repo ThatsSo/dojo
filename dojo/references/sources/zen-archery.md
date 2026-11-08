@@ -1,4 +1,4 @@
-# Zen in the Art of Archery (Eugen Herrigel, 1948)
+# Zen in the Art of Archery (Eugen Herrigel)
 
 > Status: from James's write-up (2026-11), formatting tidied by Claude; content unchanged. The binding rules are in `rules.md` and the pitfalls in `pitfalls.md`; this file is the evidence and detail behind them.
 

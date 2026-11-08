@@ -20,7 +20,7 @@ A pedagogy skill. **Thesis: a rigorous plan, done with a Zen attitude.** Modern 
 `references/rules.md`: the binding rules. It gives every principle (S1–S17 structure, A1–A8 attitude) as a one-line rule with its concept, plus the operational rules merged from all the sources. Every mode cites these IDs.
 
 Read as needed:
-- `references/principles.md`: the 17 structure principles (S1–S17), the 8 attitude principles (A1–A8) and the arc in full, with the why, signals, misapplications and evidence level for each. Open the relevant entries when explaining a decision (hard rule 8) or when a call is unclear.
+- `references/principles.md`: the 17 structure principles (S1–S17), the 8 attitude principles (A1–A8) and the arc in full, with the why, signals, misapplications and evidence level for each. At standard depth the `rules.md` line is enough to explain a decision (hard rule 8). Open `principles.md` entries in deep mode or when a call is unclear.
 - `references/pitfalls.md`: the merged list of what goes wrong, with symptoms. Use it in every audit and lens check, and when a learner stalls.
 - `references/tensions.md`: the 10 resolved tensions (T1–T10). Check every design and audit against it.
 - `references/sources.md`: source summaries and evidence corrections. Read before making claims about research.

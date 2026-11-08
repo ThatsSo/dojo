@@ -1,6 +1,6 @@
 # Coach mode
 
-Helping the user learn something directly. Same model, same attitude: a rigorous plan, a Zen attitude. Read `principles.md` first.
+Helping the user learn something directly. Same model, same attitude: a rigorous plan, a Zen attitude. Read `rules.md` first; open `principles.md` entries only when you need the detail behind a rule.
 
 **Triggers:** "teach me…", "help me learn…", "open a dojo for X", "practice plan for…", "help me prepare for <exam>". Never triggered by an ordinary question (SKILL.md, hard rule 1).
 

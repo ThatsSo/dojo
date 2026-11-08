@@ -44,11 +44,13 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 - Examine persistent errors to find the misunderstood distinction, not just repeat the item. *(chicken sexing, Woodpecker)*
 - Record and review performance (recordings, logs) to catch errors you can't see in the moment; ask outside eyes. *(Voltaic, James)*
 - Grade honestly; illusions of competence come from familiarity. *(spaced repetition)*
+- Practise deliberately: observe, diagnose, target, execute, evaluate. *(Voltaic)*
 
 **S7 Space for retention; repeat for automaticity.** Spread reviews out with growing intervals so knowledge lasts, and repeat skills past first success until they're automatic.
 - Extend retrieval intervals as retention stabilizes. *(progressive overload, spaced repetition)*
 - Overlearn: keep practising beyond first success until it's effortless. *(Woodpecker)*
 - A small daily habit compounds; trust the schedule. *(spaced repetition)*
+- Cap new cards per day (new cards create reviews for weeks) and set a target retention (about 85–90%) rather than maximizing it. *(spaced repetition)*
 
 **S8 Stay in the goldilocks zone.** Keep difficulty just above current skill; too easy bores, and too hard teaches the wrong technique.
 - Lower difficulty when overwhelmed; raise it when bored. *(Flow)*
@@ -68,6 +70,7 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 - Use multiple measures: accuracy, speed, consistency, generalization. *(chicken sexing, Voltaic)*
 - Never optimize a score by bypassing the skill ("cheesing"), and reject shortcuts that only simulate competence. *(Voltaic, Zen in the Art of Archery)*
 - Measure intuition, don't trust it: confidence isn't accuracy. *(chicken sexing)*
+- Track time and errors, including recurring errors, not just scores. *(Woodpecker, chicken sexing)*
 
 **S12 The repetition-target rule.** If the patterns *are* the skill, repeat the same set; if the set stands in for a general skill, vary it so the learner doesn't memorize the material.
 - Use large, varied, representative example sets. *(chicken sexing, Woodpecker)*
@@ -108,6 +111,7 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 **A1 Process over progress.** Practising is the success; goals are ones you're in charge of, judged by execution quality rather than outcomes alone.
 - Judge practice by the quality of execution. *(Zen in the Art of Archery)*
 - Cultivate intrinsic motivation: satisfaction in challenge, curiosity and mastery. *(Flow)*
+- Build internal engagement: use curiosity and mental challenges to make unstructured time rewarding. *(Flow)*
 
 **A2 Discipline over motivation.** Build systems and small default actions that survive moods.
 - Gamify repetition: goals, records, constraints and challenges inside routine practice. *(Flow)*
@@ -124,6 +128,7 @@ Before applying a rule, name the arc stage you're in (Map, Acquire, Automate, Pe
 - Embrace difficult practice when it improves learning, in doses you can sustain. *(Ultralearning)*
 
 **A5 Focus plus relaxation.** Peak performance is relaxed, complete focus; set up the conditions for flow, but never force it.
+- Design flow conditions: clear goals, immediate feedback, and challenge balanced to skill. *(Flow)*
 - Protect attention: remove distractions. *(Flow, Ultralearning)*
 - Reduce unnecessary tension and force; use breathing. *(Zen in the Art of Archery, Voltaic)*
 - Use a short ritual to arrive present, so repetitions are mindful rather than mindless. *(Zen in the Art of Archery)*

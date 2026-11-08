@@ -98,22 +98,27 @@ A common objection is that you can always look things up. But you can’t think 
 
 In practice: Memorize the basics of a field (vocabulary, key facts, core formulas, principles) so your working memory is free for higher-level thinking.
 ## Part 3: Best practices
-Write your own cards when you can. Writing cards is part of learning: it forces you to process and restate the idea. Premade decks are useful in some fields (medicine, languages), but you lose that benefit.
-One fact per card.
-Ask for recall, not recognition. “What does X do?” is better than “Is X involved in Y?”
-Add context and connections. Images, examples, mnemonics and links to things you know make cards stick and easier to recall in real life.
-Use cloze deletions (fill-in-the-blank) for facts that belong in context.
-Make cards from both directions where it matters, such as word to meaning and meaning to word in languages.
-Delete or rewrite troublesome cards. A card you keep failing (a “leech”) is usually badly designed, not a sign you’re stupid. Split it, add context or drop it.
-Cap new cards per day. New cards create reviews for weeks. Ten to twenty new cards a day can soon mean 100 to 200 reviews.
-Be selective. Only card what’s worth remembering long-term. A common rule of thumb, popularized by Gwern, is to memorize something if you’d otherwise spend more than about 5 minutes over your lifetime looking it up.
-On modern Anki, enable FSRS and set a target retention, usually around 85 to 90%. Higher targets increase your review load sharply.
-Common pitfalls
-Pitfall	Why it happens	Fix
-Review debt and burnout	Too many new cards, missed days	Lower new cards per day; never skip reviews
-Memorizing without understanding	Making cards before learning the concept	Understand first, then card
-Bloated cards	Several facts on one card	Split into small cards
-Recognition illusion	Cards that are too easy or yes/no	Ask for genuine recall
-Grading yourself too kindly	Ego, impatience	Be strict; “Again” is fine
-Knowledge in a vacuum	Cards isolated from real use	Combine with direct practice
-“Ease hell” (older SM-2)	Repeated failures shrink intervals permanently	Switch to FSRS
+- Write your own cards when you can. Writing cards is part of learning: it forces you to process and restate the idea. Premade decks are useful in some fields (medicine, languages), but you lose that benefit.
+- One fact per card.
+- Ask for recall, not recognition. “What does X do?” is better than “Is X involved in Y?”
+- Add context and connections. Images, examples, mnemonics and links to things you know make cards stick and easier to recall in real life.
+- Use cloze deletions (fill-in-the-blank) for facts that belong in context.
+- Make cards from both directions where it matters, such as word to meaning and meaning to word in languages.
+- Delete or rewrite troublesome cards. A card you keep failing (a “leech”) is usually badly designed, not a sign you’re stupid. Split it, add context or drop it.
+- Cap new cards per day. New cards create reviews for weeks. Ten to twenty new cards a day can soon mean 100 to 200 reviews.
+- Be selective. Only card what’s worth remembering long-term. A common rule of thumb, popularized by Gwern, is to memorize something if you’d otherwise spend more than about 5 minutes over your lifetime looking it up.
+- On modern Anki, enable FSRS and set a target retention, usually around 85 to 90%. Higher targets increase your review load sharply.
+
+## Common pitfalls
+
+*Merged into `pitfalls.md`; kept here as this source's own list.*
+
+| Pitfall | Why it happens | Fix |
+|---|---|---|
+| Review debt and burnout | Too many new cards, missed days | Lower new cards per day; never skip reviews |
+| Memorizing without understanding | Making cards before learning the concept | Understand first, then card |
+| Bloated cards | Several facts on one card | Split into small cards |
+| Recognition illusion | Cards that are too easy or yes/no | Ask for genuine recall |
+| Grading yourself too kindly | Ego, impatience | Be strict; “Again” is fine |
+| Knowledge in a vacuum | Cards isolated from real use | Combine with direct practice |
+| “Ease hell” (older SM-2) | Repeated failures shrink intervals permanently | Switch to FSRS |

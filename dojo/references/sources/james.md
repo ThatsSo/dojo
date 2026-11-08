@@ -1,6 +1,7 @@
 # James: essays on learning
 
-> Status: seed (2026-11-07), copied from the summary in `sources.md`. To be expanded from James's write-up (`writeups/james.md`).
+> Status: James's synthesis, the primary voice. Summarized from his essays; there is no separate write-up.
+
 
 ## Core idea
 From his essays on learning, Zen, flow, implicit vs. explicit learning, and the conflicting ideas about learning:

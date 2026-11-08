@@ -15,7 +15,7 @@
 <where it agrees, where it's adjusted, and which tension (T1–T10) it touches>
 
 ## Principles supported
-<principle IDs (S1–S15, A1–A7), each with one line on how>
+<principle IDs (S1–S17, A1–A8), each with one line on how>
 
 ## Caveats
 <evidence level, known disputes, limits>
