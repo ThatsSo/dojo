@@ -29,6 +29,11 @@ def test_project_kit_fits_custom_gpt_limits(tmp_path):
     assert len(instructions) <= 8000
     knowledge = sorted(p.name for p in (kit / "knowledge").iterdir())
     assert "principles.md" in knowledge and "audit.md" in knowledge
+    assert "research.md" in knowledge
+    assert "source-chicken-sexing.md" in knowledge and "source-woodpecker.md" in knowledge
+    assert "woodpecker.md" in knowledge  # no collision with the source file
     assert len(knowledge) <= 20
+    for s in ["plan.md", "Resume here", "state block", "25 minutes"]:
+        assert s in instructions, s
     for name in knowledge:
         assert name in instructions, name

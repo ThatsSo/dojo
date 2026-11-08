@@ -36,6 +36,10 @@ def build(out: Path) -> None:
     shutil.copy(ROOT / "chatgpt" / "project-instructions.md", kit / "instructions.md")
     for ref in sorted((SKILL / "references").glob("*.md")):
         shutil.copy(ref, kit / "knowledge" / ref.name)
+    # Per-source files, prefixed so sources/woodpecker.md can't overwrite woodpecker.md.
+    for src in sorted((SKILL / "references" / "sources").glob("*.md")):
+        if not src.name.startswith("_"):
+            shutil.copy(src, kit / "knowledge" / ("source-" + src.name))
 
 
 if __name__ == "__main__":
