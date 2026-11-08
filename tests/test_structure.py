@@ -212,3 +212,22 @@ def test_research_reference():
               "sample", "cite", "Without web access", "skill map"]:
         assert s in text, s
     assert "references/research.md" in read("SKILL.md")
+
+
+SOURCE_FILES = ["james", "ultralearning", "zen-archery", "flow", "spaced-repetition",
+                "woodpecker", "voltaic", "progressive-overload", "chicken-sexing"]
+SOURCE_HEADINGS = ["## Core idea", "## Key techniques", "## Examples",
+                   "## Fit with James's synthesis", "## Principles supported", "## Caveats"]
+
+
+def test_source_files():
+    index = read("references/sources.md")
+    for name in SOURCE_FILES:
+        text = read(f"references/sources/{name}.md")
+        for h in SOURCE_HEADINGS:
+            assert h in text, (name, h)
+        assert f"sources/{name}.md" in index, name
+    po = read("references/sources/progressive-overload.md")
+    assert "deload" in po and "S15" in po
+    cs = read("references/sources/chicken-sexing.md")
+    assert "Biederman" in cs and "S14" in cs

@@ -80,6 +80,35 @@ Sources: Fundamental Routines 2.5, the Benchmarks guide, the Aim Journey guide, 
 - **Training practice:** limit volume and take breaks; separate learning and performance zones; raise your worst day; a plateau means something fundamental is wrong.
 - **Fit with James:** it adds S1's decomposition, S3, S11, and the "wrong technique" reason in S8, and it confirms T2.
 
+## Progressive overload (strength training)
+
+- Adaptation stops once a load becomes routine, so raise it in **small, measured steps**: one variable at a time (weight, reps, volume, density).
+- Progress when the current level holds; **track** every step.
+- Plan **deloads** (lighter sessions or weeks), because adaptation happens in recovery.
+- **Fit with James:** it formalises "one variable at a time" and the difficulty budget, and adds step size and planned recovery. It's the source of S15 and of coach mode's progression ladders.
+
+## Chicken sexing (implicit perceptual learning)
+
+- Experts sort day-old chicks at speed, many without being able to say how. The skill is built by guess → instant expert feedback, at high volume.
+- Biederman & Shiffrar (1987): one explicit cue from an expert took novices from near chance to near expert accuracy.
+- **Fit with James:** his central example of knowledge that's felt rather than said, and support for "you need both". It enriches S14: rapid classification drills with instant correction, plus a few explicit cues.
+
+## Deeper files
+
+Each source has a longer file in `sources/`. Read them only in deep mode ("explain more") or when a claim needs the detail; this page is the everyday summary.
+
+- `sources/james.md`
+- `sources/ultralearning.md`
+- `sources/zen-archery.md`
+- `sources/flow.md`
+- `sources/spaced-repetition.md`
+- `sources/woodpecker.md`
+- `sources/voltaic.md`
+- `sources/progressive-overload.md`
+- `sources/chicken-sexing.md`
+
+Files marked "seed" still hold only the summary above; they're being expanded from James's write-ups.
+
 ## Evidence corrections
 
 Dojo states these points accurately instead of overstating them:
