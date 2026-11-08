@@ -113,10 +113,20 @@ def test_lens_optin_and_six_questions():
     assert "never block" in text.lower()
 
 
-def test_coach_files_and_session_flow():
+PLAN_SECTIONS = ["## Resume here", "## Goal", "## Research", "## Skill map",
+                 "## Progression ladders", "## Weak points", "## Review schedule",
+                 "## Benchmark", "## Settings"]
+
+
+def test_coach_planning_persistence_and_sessions():
     text = read("references/coach.md")
-    for s in ["dojo_config.py", "DOJO_LEARNING_DIR", "dojo.json", "plan.md", "log.md",
-              "cards/", "woodpecker/", "Session-only", "Long-running", "deadline"]:
+    pos = [text.index(s) for s in PLAN_SECTIONS]   # template in order
+    assert pos == sorted(pos)
+    for s in ["Planning, step", "placement check", "research.md", "dojo_config.py",
+              "DOJO_LEARNING_DIR", "~/.dojo.json", "log.md", "cards/", "woodpecker/",
+              "Session-only", "Long-running", "deadline", "25 minutes", "stops on time",
+              "rung", "N = 2", "60-day", "not started", "acquiring", "automating", "solid",
+              "state block", "why this drill", "compact"]:
         assert s in text, s
 
 
